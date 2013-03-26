@@ -29,6 +29,7 @@ li
 textarea, button, select, input
 	border: none
 	outline: none
+	font-family: 'Cuprum', Arial, Tahoma, sans-serif
 button 
 	line-height: 1
 	cursor: pointer
@@ -36,18 +37,9 @@ table
 	border-spacing: 0
 	border-collapse: collapse
 // common styles
-.wrap
-	width: 960px
-	min-height: 100%
-	height: auto !important
-	height: 100%
-	margin: 0 auto -140px
-.container
+.wrap, .container
 	width: 960px
 	margin: 0 auto
-.push
-	height: 140px
-	clear: both
 //header
 .header
 	height: 220px
@@ -56,57 +48,49 @@ table
 .logo
 	position: relative
 	float: left
-	margin: 48px 40px 0 0
-	padding-left: 85px
-	font-family: 'FiveMinutes', Arial, Tahoma, sans-serif
-	font-size: 56px
-	text-shadow: rgba(255,255,255,0.9) 0 1px 0
-	letter-spacing: -3px
-	&:before
-		content: ""
-		position: absolute
-		top: -7px
-		left: 12px
-		+sized-sprite($icons, logo)
+	margin: 41px 40px 0 12px
+	+sized-sprite($icons, logo)
+	@extend %hide-text
 .nav
 	float: left
-	margin-top: 28px
+	margin-top: 23px
 	ul
 		overflow: hidden
 	li
 		position: relative
 		float: left
 		margin-right: 25px
-		&:hover
-			+sized-sprite($icons, nav)
+		&:hover, &.active
+			+sized-sprite($icons, nav-h)
+		&.active
+			.nav__item-1
+				+sized-sprite($icons, nav1-h)
+			.nav__item-2
+				+sized-sprite($icons, nav2-h)
+			.nav__item-3
+				+sized-sprite($icons, nav3-h)
+		&:active
+			a
+				top: 1px
 	a
 		position: relative
 		display: block	
-		width: 117px
-		height: 54px	
-		padding-top: 63px
-		text-align: center
-		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif
-		font-size: 22px
-		text-shadow: rgba(255,255,255,0.9) 0 1px 0
-		&:before
-			content: ""
-			position: absolute
-			top: 2px
-			left: 50%
-			margin-left: -35px
+		@extend %hide-text
 .nav__item-1
-	&:before
-		+sized-sprite($icons, nav1)
+	+sized-sprite($icons, nav1)
+	&:hover
+		+sized-sprite($icons, nav1-h)
 .nav__item-2
-	&:before
-		+sized-sprite($icons, nav2)
+	+sized-sprite($icons, nav2)
+	&:hover
+		+sized-sprite($icons, nav2-h)
 .nav__item-3
-	&:before
-		+sized-sprite($icons, nav3)
+	+sized-sprite($icons, nav3)
+	&:hover
+		+sized-sprite($icons, nav3-h)
 .login
 	float: right
-	margin-top: 45px
+	margin: 45px 5px 0 0
 .login__pic
 	float: left
 	padding: 3px 3px 13px 3px
@@ -174,6 +158,9 @@ table
 	+box-shadow(rgba(47,110,119,0.1) -5px 7px 0)		
 	overflow: hidden
 	z-index: 10 
+	&:hover
+		img
+
 	img
 		display: block	
 .slider__type
@@ -205,6 +192,7 @@ table
 	a
 		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif
 		font-size: 32px 
+		font-weight: bold 
 		text-shadow: rgba(255,255,255,0.9) 0 1px 0
 .slider__btns
 	margin: 9px -10px 0 0
@@ -239,7 +227,63 @@ table
 	background: $red
 	&:before
 		+sized-sprite($icons, btn-delete)
-		
+//bottom
+.bottom
+	overflow: hidden
+.link
+	float: right
+	width: 352px
+	height: 65px
+	padding: 50px 0 0 88px
+	background: url(../img/link.png) 
+	a
+		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif
+		font-size: 38px 
+		font-weight: bold
+		color: #fff
+	span
+		color: $blue-dark
+//footer
+.footer
+	position: relative
+	top: -15px
+	background: url(../img/footer.png) repeat-x 
+	.container
+		height: 100px
+		overflow: hidden
+.footer__nav
+	float: left
+	margin-top: 50px
+	ul
+		overflow: hidden
+	li
+		float: left
+		margin-right: 20px
+	a
+		font-size: 13px
+		color: #d8dedf
+.copyright
+	float: right
+	margin-top: 50px
+	opacity: 0.6
+	color: #bdc8ca
+//buttons
+.btn-earning
+	position: relative
+	height: 52px
+	padding: 0 15px 0 45px
+	border: 3px solid #e4e4d2
+	+border-radius(26px)
+	background: $green-light
+	font-size: 24px
+	color: #fff
+	text-shadow: rgba(0,0,0,0.26) 1px 1px 0
+	&:before
+		content: ""
+		position: absolute
+		top: 11px
+		left: 9px
+		+sized-sprite($icons, btn-earning) 
 //test		
 .test
 	display: none
