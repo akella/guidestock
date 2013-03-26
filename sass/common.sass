@@ -147,6 +147,16 @@ table
 //slider
 .slider
 	position: relative
+.slider__prev, .slider__next
+	position: absolute
+	top: 50%
+	margin-top: -51px
+.slider__prev
+	left: -75px
+	+sized-sprite($icons, prev)
+.slider__next
+	right: -75px
+	+sized-sprite($icons, next)
 .slider__list	
 	ul
 		overflow: hidden
