@@ -7,13 +7,13 @@ html, body
 	height: 100%
 html
 	background: url(../img/bg.jpg)
-body
-	background: url(../img/bg-top.png) no-repeat 45% 0	
+body	
+	background: url(../img/bg-top.png) no-repeat 56% 0	
 	font-family: 'Cuprum', Arial, Tahoma, sans-serif
 	font-weight: normal
 	font-size: 14px
 	color: #231F20 
-	line-height: 1
+	line-height: 1	
 	//-webkit-transform: translate3d(0,0,0);
 	//-weblit-backface-visibility: hidden;
 // resets
@@ -40,17 +40,31 @@ table
 .wrap, .container
 	width: 960px
 	margin: 0 auto
+.title
+	font-family: 'FiveMinutes', Arial, Tahoma, sans-serif		
+	font-size: 62px
+	font-weight: bold 
+	text-shadow: rgba(255,255,255,0.9) 1px 1px 0
+	letter-spacing: -3px
+.title_red
+	color: $red
+.title_blue
+	color: $blue-dark
+	span
+		color: $green-light
 //header
 .header
 	height: 220px
-	margin-bottom: 65px
+	margin-bottom: 30px
 	overflow: hidden
 .logo
 	position: relative
 	float: left
 	margin: 41px 40px 0 12px
-	+sized-sprite($icons, logo)
-	@extend %hide-text
+	a
+		display: block		
+		+sized-sprite($icons, logo)
+		@extend %hide-text
 .nav
 	float: left
 	margin-top: 23px
@@ -91,6 +105,11 @@ table
 .login
 	float: right
 	margin: 45px 5px 0 0
+.login_enter
+	.login__info
+		button
+			&:before
+				+sized-sprite($icons, login)
 .login__pic
 	float: left
 	padding: 3px 3px 13px 3px
@@ -110,12 +129,11 @@ table
 		margin: 5px 0 5px 0
 		color: $blue-dark
 	a
-		margin-bottom: 10px
 		color: $red
 	button
 		position: relative
-		height: 18px
-		padding: 0 9px 0 22px
+		margin-top: 10px
+		padding: 4px 9px 2px 22px
 		background: $red
 		+border-radius(9px) 
 		font-family: 'Cuprum', Arial, Tahoma, sans-serif
@@ -128,121 +146,38 @@ table
 			top: 4px
 			left: 7px
 			+sized-sprite($icons, log)
-//slider
-.slider
-	position: relative
-.slider__prev, .slider__next
-	position: absolute
-	top: 50%
-	margin-top: -51px
-.slider__prev
-	left: -75px
-	+sized-sprite($icons, prev)
-.slider__next
-	right: -75px
-	+sized-sprite($icons, next)
-.slider__list	
-	ul
-		overflow: hidden
-	li
-		position: relative
-		float: left
-		width: 284px
-		margin-bottom: 55px
-		padding: 0 18px
-.slider__pic
-	position: relative	
-	width: 270px
-	+border-radius(50%)
-	border: 7px solid rgba(255,255,255,0.6)	
-	+box-shadow(rgba(47,110,119,0.1) -5px 7px 0)		
-	overflow: hidden
-	z-index: 10 
-	&:hover
-		img
-
-	img
-		display: block	
-.slider__type
-	position: absolute
-	top: 5px
-	left: 10px
-	width: 104px
-	height: 90px
-	padding-top: 14px
-	+border-radius(50%)		
-	+rotate(-45)
-	color: #fff
-	text-shadow: rgba(0,0,0,0.26) 0 1px 0
-	text-align: center
-	z-index: 5 
-.slider__type_approved
-	background: $green-light 
-.slider__type_saved
-	background: $blue-dark
-.slider__type_rejected
-	background: $red
-.slider__type_pending
-	background: $gray-dark
-.slider__info
-	margin: -45px 40px 0 40px
-	padding: 63px 13px 23px 13px
-	background: rgba(255,255,255,0.3)
-	+border-radius(10px) 
-	a
-		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif
-		font-size: 32px 
-		font-weight: bold 
-		text-shadow: rgba(255,255,255,0.9) 0 1px 0
-.slider__btns
-	margin: 9px -10px 0 0
-	overflow: hidden
-	button
-		position: relative
-		float: left
-		height: 18px
-		margin-left: 6px 
-		padding: 0 8px 0 19px
-		+border-radius(8px)
-		font-family: 'Cuprum', Arial, Tahoma, sans-serif
-		font-size: 12px
-		color: #FFF 
-		text-transform: uppercase
-		&:before
-			content: ""
-			position: absolute
-			top: 4px
-			left: 6px		
-		&:first-child
-			margin-left: 0 	
-.slider__submit
-	background: $green-light
-	&:before
-		+sized-sprite($icons, btn-submit) 
-.slider__edit
-	background: $blue
-	&:before
-		+sized-sprite($icons, btn-edit)
-.slider__delete
-	background: $red
-	&:before
-		+sized-sprite($icons, btn-delete)
 //bottom
 .bottom
 	overflow: hidden
-.link
-	float: right
-	width: 352px
-	height: 65px
-	padding: 50px 0 0 88px
-	background: url(../img/link.png) 
+.btn-guide
 	a
+		display: inline-block		
 		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif
 		font-size: 38px 
 		font-weight: bold
 		color: #fff
+		letter-spacing: -2px
+.btn-guide_another
+	float: right
+	width: 440px
+	height: 115px
+	background: url(../img/btn-another-guide.png) 
+	a
+		margin: 50px 0 0 113px
+		font-size: 38px 
 	span
 		color: $blue-dark
+.btn-guide_create
+	width: 450px
+	height: 320px
+	margin-left: 250px
+	background: url(../img/btn-create-guide.png)	
+	a
+		margin: 95px 0 0 170px
+		font-size: 62px 
+	span
+		display: block
+		font-size: 80px 
 //footer
 .footer
 	position: relative
@@ -284,10 +219,28 @@ table
 		top: 11px
 		left: 9px
 		+sized-sprite($icons, btn-earning) 
-//test		
-.test
-	display: none
-	position: absolute
-	top: 0
-	left: 50%
-	margin-left: -888px 
+.btn
+	position: relative
+	padding: 4px 8px 2px 19px
+	+border-radius(8px)
+	font-family: 'Cuprum', Arial, Tahoma, sans-serif
+	font-size: 12px
+	color: #FFF 
+	text-transform: uppercase
+	&:before
+		content: ""
+		position: absolute
+		top: 4px
+		left: 6px			
+.btn_submit
+	background: $green-light
+	&:before
+		+sized-sprite($icons, btn-submit) 
+.btn_edit
+	background: $blue
+	&:before
+		+sized-sprite($icons, btn-edit)
+.btn_delete
+	background: $red
+	&:before
+		+sized-sprite($icons, btn-delete)

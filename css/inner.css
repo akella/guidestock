@@ -1,2 +1,41 @@
 @import url(http://fonts.googleapis.com/css?family=Cuprum);
 @font-face { font-family: "FiveMinutes"; src: url("../fonts/fiveminutes.eot"); src: url("../fonts/fiveminutes.eot?#iefix") format("embedded-opentype"), url("../fonts/fiveminutes.woff") format("woff"), url("../fonts/fiveminutes.ttf") format("truetype"), url("../fonts/fiveminutes.svg#fiveminutes") format("svg"); font-weight: normal; font-style: normal; }
+
+.how-it-works { margin-bottom: 35px; }
+.how-it-works .title { margin-bottom: 20px; }
+.how-it-works p { margin-bottom: 25px; font-size: 18px; color: #2c6871; }
+
+.instructions { font-size: 0; }
+.instructions li { display: inline-block; width: 200px; padding: 0 20px; margin-bottom: 50px; vertical-align: top; text-align: center; }
+.instructions p { font-size: 18px; color: #2c6871; }
+
+.instructions__pic { position: relative; margin-bottom: 20px; width: 200px; height: 200px; }
+.instructions__pic img { margin: 3px; }
+.instructions__pic span { position: absolute; top: 0; left: 0; width: 58px; height: 58px; line-height: 58px; text-align: center; font-family: "FiveMinutes", Arial, Tahoma, sans-serif; font-size: 46px; font-weight: bold; color: white; text-shadow: rgba(0, 0, 0, 0.26) 1px 1px 0; z-index: 10; }
+.instructions__pic img, .instructions__pic span { -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; }
+
+.instructions__pic-out { position: absolute; top: 0; left: 0; background: url('../img/icons-sad58bd8c50.png') 0 -223px no-repeat; width: 200px; height: 200px; z-index: 5; }
+
+.instructions__one, .instructions__four { background: #a9a555; }
+
+.instructions__two, .instructions__five { background: #2c6871; }
+
+.instructions__three { background: #c85838; }
+
+.instructions__info { font-size: 22px; color: #2c6871; text-align: center; }
+.instructions__info span { color: #c85838; }
+
+.how-to-create { margin-bottom: 10px; }
+.how-to-create .title { margin-bottom: 40px; }
+
+.steps { margin-bottom: 50px; }
+
+.steps__title { margin-bottom: 100px; font-size: 58px; color: #a9a555; text-align: center; }
+.steps__title span { display: block; margin-left: 200px; font-size: 80px; color: #2c6871; text-align: right; }
+
+.steps__list { font-size: 0; text-align: center; }
+.steps__list li { display: inline-block; width: 271px; padding: 0 24px; vertical-align: top; }
+.steps__list img { margin-bottom: 30px; }
+.steps__list .title { margin-bottom: 25px; font-size: 38px; color: #2c6871; }
+.steps__list .title span { color: #c85838; }
+.steps__list p { font-size: 15px; color: #2c6871; text-shadow: rgba(255, 255, 255, 0.3) 1px 1px 0; line-height: 1.4; }

@@ -1,2 +1,104 @@
 @import "base"
 //styles for inner pages
+//how it works
+.how-it-works
+	margin-bottom: 35px
+	.title
+		margin-bottom: 20px
+	p
+		margin-bottom: 25px
+		font-size: 18px
+		color: $blue-dark 
+.instructions
+	font-size: 0
+	li
+		display: inline-block
+		width: 200px
+		padding: 0 20px
+		margin-bottom: 50px
+		vertical-align: top
+		text-align: center	
+	p
+		font-size: 18px
+		color: $blue-dark 
+.instructions__pic
+	position: relative
+	margin-bottom: 20px
+	width: 200px
+	height: 200px
+	img
+		margin: 3px
+	span
+		position: absolute
+		top: 0
+		left: 0
+		width: 58px
+		height: 58px
+		line-height: 58px
+		text-align: center
+		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif		
+		font-size: 46px
+		font-weight: bold 
+		color: #fff
+		text-shadow: rgba(0,0,0,0.26) 1px 1px 0
+		z-index: 10 
+	img, span
+		+border-radius(50%)
+.instructions__pic-out
+	position: absolute
+	top: 0
+	left: 0
+	+sized-sprite($icons, in-out)
+	z-index: 5 
+.instructions__one, .instructions__four
+	background: $green-light
+.instructions__two, .instructions__five
+	background: $blue-dark
+.instructions__three
+	background: $red 
+.instructions__info
+	font-size: 22px
+	color: $blue-dark 
+	text-align: center
+	span
+		color: $red
+//how-to-create
+.how-to-create
+	margin-bottom: 10px
+	.title
+		margin-bottom: 40px
+//steps
+.steps
+	margin-bottom: 50px
+.steps__title
+	margin-bottom: 100px
+	font-size: 58px	
+	color: $green-light
+	text-align: center
+	span
+		display: block
+		margin-left: 200px
+		font-size: 80px
+		color: $blue-dark
+		text-align: right
+.steps__list
+	font-size: 0
+	text-align: center
+	li
+		display: inline-block
+		width: 271px
+		padding: 0 24px
+		vertical-align: top
+	img
+		margin-bottom: 30px
+	.title
+		margin-bottom: 25px
+		font-size: 38px 
+		color: $blue-dark
+		span
+			color: $red
+	p
+		font-size: 15px
+		color: $blue-dark
+		text-shadow: rgba(255,255,255,0.3) 1px 1px 0
+		line-height: 1.4
