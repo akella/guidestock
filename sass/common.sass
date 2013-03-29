@@ -149,7 +149,7 @@ table
 //bottom
 .bottom
 	overflow: hidden
-.btn-guide
+.btn-big
 	a
 		display: inline-block		
 		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif
@@ -157,17 +157,22 @@ table
 		font-weight: bold
 		color: #fff
 		letter-spacing: -2px
-.btn-guide_another
+.btn-big_another, .btn-big_save
 	float: right
 	width: 440px
 	height: 115px
-	background: url(../img/btn-another-guide.png) 
+	background: url(../img/btn-another-guide.png)
+.btn-big_another	 
 	a
 		margin: 50px 0 0 113px
 		font-size: 38px 
 	span
 		color: $blue-dark
-.btn-guide_create
+.btn-big_save
+	a
+		margin: 35px 0 0 145px
+		font-size: 66px 
+.btn-big_create
 	width: 450px
 	height: 320px
 	margin-left: 250px
@@ -244,3 +249,72 @@ table
 	background: $red
 	&:before
 		+sized-sprite($icons, btn-delete)
+//popups
+.popup
+	position: absolute
+	top: 50px
+	left: 50px
+	width: 580px
+	height: 200px
+	background: #e2e5d9
+	&:before, &:after
+		content: ""
+		position: absolute
+	&:before
+		top: -39px
+		left: -5px
+		+sized-sprite($icons, pp-bg1)
+	&:after
+		top: -38px
+		right: -33px
+		+sized-sprite($icons, pp-bg3)
+.popup_contacts
+	width: 620px
+	padding: 0 60px
+.popup__title
+	margin-bottom: 25px
+	font-family: 'FiveMinutes', Arial, Tahoma, sans-serif		
+	font-size: 67px
+	font-weight: bold 
+	color: $blue-dark
+	text-shadow: rgba(255,255,255,0.3) 0 1px 0
+	letter-spacing: -3px
+	span
+		color: $red
+.popup__bg-1
+	&:before, &:after
+		content: ""
+		position: absolute
+	&:before
+		bottom: -36px
+		right: -33px
+		+sized-sprite($icons, pp-bg5)
+	&:after
+		bottom: -36px
+		left: -5px
+		+sized-sprite($icons, pp-bg7)
+.popup__bg-2, .popup__bg-3, .popup__bg-4
+	position: absolute
+	img
+		width: 100%
+		height: 100%
+.popup__bg-2
+	top: -39px
+	left: 51px
+	right: 0
+	height: 39px
+.popup__bg-3
+	top: 0
+	bottom: 0
+	right: -33px
+	width: 33px
+.popup__bg-4
+	bottom: -37px
+	right: 0
+	left: 51px
+	height: 37px
+//text-field
+.text-field
+	position: relative
+		
+		
