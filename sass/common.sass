@@ -256,13 +256,18 @@ table
 	left: 20px
 	width: 580px
 	background: #e2e5d9	
-.popup_contacts
+	a
+		color: $blue
+		text-decoration: underline
+		&:hover
+			color: $blue-dark
+.popup_contacts, .popup_password
 	width: 620px
 	padding: 0 40px 0 60px
 	.text-field
 		&:last-child
 			margin: 11px 0 35px 0
-.popup_login
+.popup_login, .popup_sign
 	width: 325px
 	padding: 0 20px 0 30px
 	.popup__bg-1
@@ -327,9 +332,6 @@ table
 			font-size: 14px			
 		a
 			float: right
-			text-decoration: underline
-			&:hover, &.active
-				color: #349ba6
 	.popup__btn
 		bottom: -50px
 		right: 15px
@@ -362,7 +364,30 @@ table
 			+sized-sprite($icons, ok)	
 			z-index: 10 
 			&:hover
-				+sized-sprite($icons, ok-h)	
+				+sized-sprite($icons, ok-h)
+.popup_sign
+	.popup__error
+		margin: -17px 0 15px 0
+.popup__terms
+	margin: 5px 0 15px 0
+	label
+		position: relative
+		padding-left: 30px
+		font-size: 14px
+		color: $blue-dark
+	input, i
+		position: absolute
+		top: -2px
+		left: 0
+	input
+		width: 19px
+		height: 19px
+		opacity: 0
+		z-index: 5 
+		&[type="checkbox"]:checked + i
+			+sized-sprite($icons, check-a)			
+	i
+		+sized-sprite($icons, check)
 .popup__error
 	font-size: 14px
 	letter-spacing: -1px
@@ -393,6 +418,94 @@ table
 		width: 100%
 		border-top: 1px solid #b9b9b9 
 		border-bottom: 1px solid #fff 
+.popup_password
+	.text-field
+		width: 370px
+		input
+			width: 322px
+	.text-field__bg-1
+		left: -3px
+	.text-field__bg-2
+		left: -2px
+	.popup__btn
+		right: 20px
+		top: 80px
+.popup_pay
+	width: 1260px
+	padding: 0 20px 0 30px
+.popup__balance
+	overflow: hidden
+	.text-field
+		float: left
+		margin-right: 50px		
+	.text-field__bg-1
+		left: -2px
+		right: -1px
+	.text-field__bg-2 
+		left: -2px
+		right: -2px
+	.text-field_mod
+		.text-field__bg-1
+			left: -3px
+			right: -2px
+		.text-field__bg-2 
+			left: -3px
+			right: -3px
+	p
+		position: relative
+		height: 60px
+		padding: 0 40px 0 20px
+		border: 1px solid #a7a8a5
+		border-width: 0 1px 0 1px
+		background: #f9f9f7
+		line-height: 60px
+		font-size: 35px
+		color: $blue-dark
+		z-index: 5 
+		strong, span
+			float: left
+		strong
+			font-size: 56px
+			color: $green-light
+		span
+			margin-right: 17px 
+.popup__steps
+	li
+		position: relative
+		padding-left: 130px	
+		margin-bottom: 40px	
+		&:first-child
+			margin-bottom: 60px
+	strong
+		position: absolute
+		top: -10px
+		left: 0
+		width: 90px
+		height: 90px
+		+border-radius(50%)
+		background: $green-light
+		line-height: 90px
+		text-align: center
+		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif	
+		font-size: 62px
+		font-weight: bold 
+		color: #FFF  
+		text-shadow: rgba(0,0,0,0.26) 0 1px 0
+	p
+		padding-bottom: 40px
+		font-size: 34px
+		color: $blue-dark
+		i
+			position: relative
+			top: 20px
+			display: inline-block
+			margin: 0 8px 0 12px
+			+sized-sprite($icons, pay)	
+	.text-field
+		width: 595px
+		margin: 11px 0 40px 0
+		input
+			width: 546px
 .popup__title
 	position: relative
 	padding: 5px 0 35px 0
