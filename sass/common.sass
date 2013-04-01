@@ -40,6 +40,8 @@ table
 .wrap, .container
 	width: 960px
 	margin: 0 auto
+.wrap
+	padding-top: 40px
 .title
 	font-family: 'FiveMinutes', Arial, Tahoma, sans-serif		
 	font-size: 62px
@@ -63,7 +65,7 @@ table
 	margin: 41px 40px 0 12px
 	a
 		display: block		
-		+sized-sprite($icons, logo)
+		+sized-sprite($icons, logo-b)
 		@extend %hide-text
 .nav
 	float: left
@@ -74,15 +76,20 @@ table
 		position: relative
 		float: left
 		margin-right: 25px
-		&:hover, &.active
-			+sized-sprite($icons, nav-h)
 		&.active
-			.nav__item-1
-				+sized-sprite($icons, nav1-h)
-			.nav__item-2
-				+sized-sprite($icons, nav2-h)
-			.nav__item-3
-				+sized-sprite($icons, nav3-h)
+			a				
+				&.nav__item-1
+					+sized-sprite($icons, nav1-a)
+					background-color: #c85838
+				&.nav__item-2
+					+sized-sprite($icons, nav2-a)
+					background-color: #c85838
+				&.nav__item-3
+					+sized-sprite($icons, nav3-a)	
+					background-color: #c85838			
+		&:hover
+			a
+				background-color: #349ba6 
 		&:active
 			a
 				top: 1px
@@ -90,6 +97,9 @@ table
 		position: relative
 		display: block	
 		@extend %hide-text
+		+border-radius(50%)
+		&:hover
+
 .nav__item-1
 	+sized-sprite($icons, nav1)
 	&:hover
@@ -200,7 +210,7 @@ table
 		float: left
 		margin-right: 20px
 	a
-		font-size: 13px
+		font-size: 16px
 		color: #d8dedf
 .copyright
 	float: right
@@ -587,10 +597,13 @@ table
 		background: #f9f9f7 
 		font-size: 34px
 		font-family: 'Cuprum', Arial, Tahoma, sans-serif
+		color: #898988 
 		z-index: 5 
 	input
 		height: 44px
 		padding: 0 24px
+		&.focus
+			color: $blue-dark
 	textarea
 		height: 420px
 		padding: 10px 24px
