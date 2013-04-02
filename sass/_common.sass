@@ -58,14 +58,13 @@ table
 .header
 	height: 220px
 	margin-bottom: 30px
-	overflow: hidden
 .logo
 	position: relative
 	float: left
-	margin: 41px 40px 0 12px
+	margin: 22px 40px 0 -100px
 	a
 		display: block		
-		+sized-sprite($icons, logo-b)
+		+sized-sprite($icons, logo)
 		@extend %hide-text
 .nav
 	float: left
@@ -75,31 +74,25 @@ table
 	li
 		position: relative
 		float: left
-		margin-right: 25px
-		&.active
-			a				
-				&.nav__item-1
-					+sized-sprite($icons, nav1-a)
-					background-color: #c85838
-				&.nav__item-2
-					+sized-sprite($icons, nav2-a)
-					background-color: #c85838
-				&.nav__item-3
-					+sized-sprite($icons, nav3-a)	
-					background-color: #c85838			
+		margin-right: 25px		
 		&:hover
-			a
-				background-color: #349ba6 
+			+sized-sprite($icons, nav-h)			
 		&:active
 			a
 				top: 1px
+		&.active
+			+sized-sprite($icons, nav-a)
+			.nav__item-1
+				+sized-sprite($icons, nav1-h)
+			.nav__item-2
+				+sized-sprite($icons, nav2-h)
+			.nav__item-3
+				+sized-sprite($icons, nav3-h)
 	a
 		position: relative
 		display: block	
 		@extend %hide-text
 		+border-radius(50%)
-		&:hover
-
 .nav__item-1
 	+sized-sprite($icons, nav1)
 	&:hover
@@ -119,7 +112,7 @@ table
 	.login__info
 		button
 			&:before
-				+sized-sprite($icons, login)
+				+sized-sprite($icons, login)			
 .login__pic
 	float: left
 	padding: 3px 3px 13px 3px
@@ -156,9 +149,14 @@ table
 			top: 4px
 			left: 7px
 			+sized-sprite($icons, log)
+		&:hover
+			background: $blue-dark 
 //bottom
 .bottom
 	overflow: hidden
+.bottom_mod
+	height: 115px
+	overflow: visible
 .btn-big
 	a
 		display: inline-block		
@@ -172,27 +170,63 @@ table
 	width: 440px
 	height: 115px
 	background: url(../img/btn-another-guide.png)
-.btn-big_another	 
 	a
-		margin: 50px 0 0 113px
+		margin: 10px 0 0 100px
+		+sized-sprite($icons, btn-red)
 		font-size: 38px 
-	span
-		color: $blue-dark
-.btn-big_save
-	a
-		margin: 35px 0 0 145px
-		font-size: 66px 
-.btn-big_create
-	width: 450px
-	height: 320px
-	margin-left: 250px
-	background: url(../img/btn-create-guide.png)	
-	a
-		margin: 95px 0 0 170px
-		font-size: 62px 
+		&:hover
+			+sized-sprite($icons, btn-red-a)
 	span
 		display: block
-		font-size: 80px 
+		text-align: center
+.btn-big_another		
+	span		
+		padding: 15px 5px 0 5px		
+.btn-big_save
+	position: relative
+	span
+		padding: 24px 5px 0 0
+	.btn-big__sbt
+		position: absolute
+		top: -10px
+		left: 250px
+		margin: 0
+		+sized-sprite($icons, sbt)
+		&:hover
+			+sized-sprite($icons, sbt)
+		span
+			padding: 45px 2px 0 0
+.btn-big_save
+	a		
+		font-size: 66px 
+.btn-big_create, .btn-big_create-1
+	position: relative
+	width: 450px	
+	background: url(../img/btn-create-guide.png)	
+	a
+		margin: 70px 0 50px 150px		
+		+sized-sprite($icons, btn-cr)
+		font-size: 62px 
+		text-align: center
+		&:hover
+			+sized-sprite($icons, btn-cr-h)		
+		&:active
+			+sized-sprite($icons, btn-cr-a)	
+	strong
+		display: block
+		padding: 40px 5px 0 0
+	span
+		display: block
+		font-size: 80px	
+.btn-big_create
+	margin-left: 300px
+	.ico-comm
+		position: absolute
+		top: 70px
+		left: -300px
+		+sized-sprite($icons, ico-comm)
+.btn-big_create-1
+	margin-left: 230px
 //footer
 .footer
 	position: relative
@@ -251,6 +285,8 @@ table
 	background: $green-light
 	&:before
 		+sized-sprite($icons, btn-submit) 
+	&:hover
+		background: #adb24f 
 .btn_edit
 	background: $blue
 	&:before
@@ -259,6 +295,9 @@ table
 	background: $red
 	&:before
 		+sized-sprite($icons, btn-delete)
+.btn_delete, .btn_edit
+	&:hover
+		background: $blue-dark
 //popups
 .popup
 	position: absolute

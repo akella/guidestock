@@ -132,9 +132,11 @@
 		top: -2px
 		margin-left: 12px
 		+sized-sprite($icons, btn-edit-pr)
+		&:hover
+			+sized-sprite($icons, btn-edit-pr-h)
 .profile__name
 	position: relative
-	width: 232px	
+	width: 232px
 	margin: -10px 0 15px -10px
 	input
 		width: 210px
@@ -151,6 +153,8 @@
 		top: 23px
 		right: -15px
 		+sized-sprite($icons, btn-name)
+		&:hover
+			+sized-sprite($icons, btn-name-h)
 .profile__country
 	strong
 		display: block
@@ -159,3 +163,141 @@
 		color: $blue-dark
 .country-select
 	+sized-sprite($icons, select)
+//create
+.create
+	padding: 80px 10px 100px 10px
+.create__panel
+	position: relative
+	padding: 0 17px
+	margin-bottom: 70px
+	background: url(../img/bg-create.jpg)
+.create__bg-1, .create__bg-2, .create__bg-3, .create__bg-4, .create__bg-5, .create__bg-6, .create__bg-7, .create__bg-8
+	position: absolute
+	img
+		width: 100%
+		height: 100%
+.create__bg-1
+	top: -25px
+	left: -7px
+	right: -8px
+	height: 25px	
+.create__bg-2
+	top: 0
+	bottom: 0
+	right: -8px
+	width: 8px
+.create__bg-3
+	bottom: -15px
+	right: -8px
+	left: -7px
+	height: 15px
+.create__bg-4
+	top: 0
+	bottom: 0
+	left: -7px
+	width: 8px
+.create__bg-5
+	top: -10px
+	left: -10px
+	right: -10px
+	height: 10px	
+.create__bg-6
+	top: 0
+	bottom: 0
+	right: -10px
+	width: 10px
+.create__bg-7
+	bottom: -9px
+	right: -10px
+	left: -10px
+	height: 10px
+.create__bg-8
+	top: 0
+	bottom: 0
+	left: -10px
+	width: 10px
+.create__bg-9, .create__bg-10
+	img
+		display: block
+		width: 100%
+.create__map
+	position: relative
+	padding: 15px
+	margin-bottom: 100px
+	background: url(../img/bg-create.jpg)
+	img
+		display: block
+.create__detail
+	overflow: hidden
+.create__col-1
+	float: left
+	width: 290px
+	margin-right: 20px
+.create__name
+	margin-bottom: 25px
+	+sized-sprite($icons, input)
+	input
+		width: 268px
+		height: 40px
+		padding: 0 10px
+		background: none
+		font-size: 18px
+		color: $blue-dark
+	.text-field__bg-1
+		left: -2px
+		right: -1px
+	.text-field__bg-2
+		left: -1px
+		right: -1px
+.create__col-2
+	overflow: hidden
+	.country-select
+		margin-bottom: 25px	
+.create__label
+	margin-bottom: 10px
+	font-size: 18px
+	color: $blue-dark  
+.create__ptoto
+	overflow: hidden
+.create__pic
+	position: relative
+	float: left
+	width: 189px
+	height: 180px
+	margin-right: 11px
+	overflow: hidden	
+.create__pic-bg
+	position: absolute
+	top: 0
+	left: 0
+	+sized-sprite($icons, create-photo)
+.create__load
+	position: relative
+	float: left
+	margin-top: 133px
+	+sized-sprite($icons, btn-load)
+	line-height: 38px
+	text-align: center
+	font-size: 18px
+	color: #fff
+	text-shadow: 1px 1px 0 $blue-dark 
+	input
+		position: absolute
+		top: 0
+		left: 0
+		width: 90px
+		height: 38px
+		cursor: default
+		opacity: 0
+.create__desc
+	position: relative
+	textarea
+		display: block
+		width: 608px
+		height: 150px
+		padding: 5px 10px
+		border: 1px solid #8d918a
+		border-width: 0 1px 0 1px		
+		background: #f1f4e8
+		font-size: 18px
+		color: $blue-dark

@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+<<<<<<< HEAD
 //Placeholder
 // var placeholder_val;
 // $('.input').focusin(function(){
@@ -15,6 +16,11 @@ $(document).ready(function() {
 $("[placeholder]").togglePlaceholder();
 
 
+=======
+//placeholder
+$("[placeholder]").togglePlaceholder();
+
+>>>>>>> fixes
 });
 
 $.fn.togglePlaceholder = function() {
@@ -23,9 +29,17 @@ $.fn.togglePlaceholder = function() {
         .data("holder", $(this).attr("placeholder"))
         .focusin(function(){
             $(this).attr('placeholder','');
+<<<<<<< HEAD
         })
         .focusout(function(){
             $(this).attr('placeholder',$(this).data('holder'));
+=======
+            $(this).addClass('focus');
+        })
+        .focusout(function(){
+            $(this).attr('placeholder',$(this).data('holder'));
+            $(this).removeClass('focus');
+>>>>>>> fixes
         });
     });
 };
