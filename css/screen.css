@@ -273,8 +273,8 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .slider__next { right: -75px; background: url('../img/icons-s323f9dd4f4.png') 0 -5099px no-repeat; width: 22px; height: 102px; }
 
-.slider__list ul { overflow: hidden; }
-.slider__list li { position: relative; float: left; width: 283px; margin-bottom: 55px; padding: 0 18px; }
+.slider__list ul { overflow: hidden; font-size: 0; }
+.slider__list li { position: relative; display: inline-block; vertical-align: top; width: 283px; width: 277px; margin-bottom: 55px; padding: 0 18px; }
 
 .slider__pic { position: relative; }
 .slider__pic img { position: relative; margin: 5px 0 0 8px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; z-index: 10; }
