@@ -285,8 +285,6 @@ table
 	background: $green-light
 	&:before
 		+sized-sprite($icons, btn-submit) 
-	&:hover
-		background: #adb24f 
 .btn_edit
 	background: $blue
 	&:before
@@ -295,7 +293,11 @@ table
 	background: $red
 	&:before
 		+sized-sprite($icons, btn-delete)
-.btn_delete, .btn_edit
+.btn_restore
+	background: $gray-dark
+	&:before
+		+sized-sprite($icons, btn-submit)
+.btn_delete, .btn_edit, .btn_submit, .btn_restore
 	&:hover
 		background: $blue-dark
 //popups

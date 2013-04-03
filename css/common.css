@@ -114,6 +114,9 @@ table { border-spacing: 0; border-collapse: collapse; }
 .btn_delete { background: #c85838; }
 .btn_delete:before { background: url('../img/icons-s97100f2394.png') 0 -4604px no-repeat; width: 9px; height: 10px; }
 
+.btn_restore { background: #9ca199; }
+.btn_delete:before { background: url('../img/icons-s97100f2394.png') 0 -4604px no-repeat; width: 9px; height: 10px; }
+
 .popup { position: absolute; top: 50px; left: 20px; width: 580px; background: #e2e5d9; }
 .popup a { color: #349ba6; text-decoration: underline; }
 .popup a:hover { color: #2c6871; }
