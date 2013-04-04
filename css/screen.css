@@ -262,8 +262,8 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .text-field { position: relative; margin: 10px 0 40px 0; }
 .text-field input, .text-field textarea { position: relative; width: 305px; border: 1px solid #a7a8a5; border-width: 0 1px 0 1px; background: #f9f9f7; font-size: 18px; font-family: "Cuprum", Arial, Tahoma, sans-serif; color: #898988; z-index: 5; }
+.text-field input.focus, .text-field textarea.focus { color: #2c6871; }
 .text-field input { height: 20px; padding: 0 10px; }
-.text-field input.focus { color: #2c6871; }
 .text-field textarea { height: 180px; padding: 5px 10px; resize: none; }
 
 .text-field_last { margin: 10px 0 20px 0; }

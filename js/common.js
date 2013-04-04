@@ -15,7 +15,6 @@ $.fn.togglePlaceholder = function() {
         })
         .focusout(function(){
             $(this).attr('placeholder',$(this).data('holder'));
-            $(this).removeClass('focus');
         });
     });
 };
