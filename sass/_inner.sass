@@ -171,6 +171,77 @@
 	padding: 0 17px
 	margin-bottom: 70px
 	background: url(../img/bg-create.jpg)
+.create__instruments
+	padding: 20px 0
+	overflow: hidden
+.create__btns
+	float: left
+	margin-right: 20px
+	div
+		float: left
+		margin-right: 6px
+		border-radius: 50%
+		border: 4px solid #fff
+		cursor: pointer
+		&:hover
+			border-color: #f1dba1
+		&:active
+			border-color: #5a5c57
+.create__btns_mod
+	margin: 0 60px 0 20px
+	div
+		margin-right: 10px
+.create__slider
+	position: relative
+	float: left
+	width: 420px
+	height: 12px
+	margin: 20px 30px 19px 0
+	background: #bbcec5
+	border-radius: 5px
+	i
+		position: absolute
+		top: -3px
+		left: 50px
+		+sized-sprite($icons, c-sl)
+		cursor: pointer
+.create__volume
+	position: relative
+	float: left
+	padding-left: 42px 
+	.create__slider
+		width: 132px
+		margin-right: 18px 
+.create__mute
+	position: absolute
+	top: 12px
+	left: 0
+	+sized-sprite($icons, vol)
+.create__time
+	float: left
+	margin-top: 17px
+	font-size: 18px
+	color: $blue-dark
+	span
+		color: $red 
+.cr-btn-1
+	+sized-sprite($icons, c-btn-1)
+.cr-btn-2
+	+sized-sprite($icons, c-btn-2)
+.cr-btn-3
+	+sized-sprite($icons, c-btn-3)
+.cr-btn-4
+	+sized-sprite($icons, c-btn-4)
+.cr-btn-5
+	+sized-sprite($icons, c-btn-5)
+.cr-btn-6
+	+sized-sprite($icons, c-btn-6)
+.cr-btn-7
+	+sized-sprite($icons, c-btn-7)
+.cr-btn-8
+	+sized-sprite($icons, c-btn-8)
+.cr-btn-9
+	+sized-sprite($icons, c-btn-9)
 .create__bg-1, .create__bg-2, .create__bg-3, .create__bg-4, .create__bg-5, .create__bg-6, .create__bg-7, .create__bg-8
 	position: absolute
 	img
