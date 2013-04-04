@@ -8,7 +8,7 @@ $("[placeholder]").togglePlaceholder();
 $.fn.togglePlaceholder = function() {
     return this.each(function() {
         $(this)
-        .data("holder", $(this).attr("placeholder"))
+        .data('holder', $(this).attr('placeholder'))
         .focusin(function(){
             $(this).attr('placeholder','');
             $(this).addClass('focus');
