@@ -57,11 +57,10 @@ table
 //header
 .header
 	height: 220px
-	margin-bottom: 30px
 .logo
 	position: relative
 	float: left
-	margin: 22px 40px 0 -100px
+	margin: 22px 40px 0 -50px
 	a
 		display: block		
 		+sized-sprite($icons, logo)
@@ -107,7 +106,7 @@ table
 		+sized-sprite($icons, nav3-h)
 .login
 	float: right
-	margin: 45px 5px 0 0
+	margin: 30px 5px 0 -25px
 .login_enter
 	.login__info
 		button
@@ -115,7 +114,7 @@ table
 				+sized-sprite($icons, login)			
 .login__pic
 	float: left
-	padding: 3px 3px 13px 3px
+	padding: 6px 3px 13px 3px
 	margin-right: 27px
 	background: rgba(255,255,255,0.5) 
 	+box-shadow(rgba(0,0,0,0.1) 0 0 0 1px, #fff 0 0 4px inset)
@@ -222,7 +221,7 @@ table
 	margin-left: 300px
 	.ico-comm
 		position: absolute
-		top: 70px
+		top: 0
 		left: -300px
 		+sized-sprite($icons, ico-comm)
 .btn-big_create-1
@@ -246,6 +245,8 @@ table
 	a
 		font-size: 16px
 		color: #d8dedf
+		&:hover
+			color: $blue
 .copyright
 	float: right
 	margin-top: 50px
@@ -285,6 +286,10 @@ table
 	background: $green-light
 	&:before
 		+sized-sprite($icons, btn-submit) 
+.btn_cancel_moderation
+	background: $orange
+	&:before
+		+sized-sprite($icons, btn-delete)
 .btn_edit
 	background: $blue
 	&:before
@@ -297,7 +302,7 @@ table
 	background: $gray-dark
 	&:before
 		+sized-sprite($icons, btn-submit)
-.btn_delete, .btn_edit, .btn_submit, .btn_restore
+.btn
 	&:hover
 		background: $blue-dark
 //popups
@@ -383,6 +388,7 @@ table
 			font-size: 14px			
 		a
 			float: right
+			padding-right: 5px
 	.popup__btn
 		bottom: -50px
 		right: 15px
@@ -416,6 +422,11 @@ table
 			z-index: 10 
 			&:hover
 				+sized-sprite($icons, ok-h)
+.popup_login
+	top: 50%
+	left: 50%
+	margin-left: -200px
+	margin-top: -200px
 .popup_sign
 	.popup__error
 		margin: -17px 0 15px 0
@@ -638,7 +649,7 @@ table
 		background: #f9f9f7 
 		font-size: 34px
 		font-family: 'Cuprum', Arial, Tahoma, sans-serif
-		color: #898988 
+		color: $blue-dark
 		z-index: 5 
 	input
 		height: 44px
