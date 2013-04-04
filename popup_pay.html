@@ -14,40 +14,42 @@
 <form class="popup popup_pay" action="">
 	<div class="popup__title">Payout <span>Request</span></div>
 	<div class="popup__balance">
-		<div class="text-field">
-			<p><span>Your balance:</span><strong>$533</strong></p>
-			<div class="text-field__bg-1"><img src="img/inp1.png" alt=""></div>
-			<div class="text-field__bg-2"><img src="img/inp2.png" alt=""></div>
-		</div>
-		<div class="text-field text-field_mod">
-			<p><span>Available with withdrawal:</span><strong>$533</strong></p>
-			<div class="text-field__bg-1"><img src="img/inp1.png" alt=""></div>
-			<div class="text-field__bg-2"><img src="img/inp2.png" alt=""></div>
-		</div>
+		<span>Available balance:</span>
+		<strong>$533</strong>
 	</div>
 	<ul class="popup__steps">
-		<li>
-			<strong>1</strong>
-			<p><span>Fill in your</span><i></i><span>account details:</span></p>
+		<li class="popup__step-1">
+			<div class="popup__count">1</div>
+			<div class="popup__step-title">Select the payment system:</div>
+			<label class="popup__pay-sys1">
+				<input type="radio" name="pay-system" checked><i></i><span></span>
+			</label>
+			<label class="popup__pay-sys2">
+				<input type="radio" name="pay-system"><i></i><span></span>
+			</label>
+		</li>
+		<li class="popup__step-2">
+			<div class="popup__count">2</div>
+			<div class="popup__step-title">Fill in the fields below:</div>
 			<div class="text-field">
-				<input type="text" placeholder="Payout Account">
+				<input type="text" placeholder="Payout Account" class="">
 				<div class="text-field__bg-1"><img src="img/inp1.png" alt=""></div>
 				<div class="text-field__bg-2"><img src="img/inp2.png" alt=""></div>
 			</div>
 			<div class="text-field">
-				<input type="text" placeholder="Confirm Account">
+				<input type="text" placeholder="Confirm Account" class="">
 				<div class="text-field__bg-1"><img src="img/inp1.png" alt=""></div>
 				<div class="text-field__bg-2"><img src="img/inp2.png" alt=""></div>
 			</div>
 			<div class="text-field">
-				<input type="text" placeholder="Amount">
+				<input type="text" placeholder="Amount" class="">
 				<div class="text-field__bg-1"><img src="img/inp1.png" alt=""></div>
 				<div class="text-field__bg-2"><img src="img/inp2.png" alt=""></div>
 			</div>
 		</li>
-		<li>
-			<strong>2</strong>
-			<p><a href="#">Upload</a> a scanned copy of your driver's license, passport or other document(s)<br>proving your identity</p>
+		<li class="popup__step-3">
+			<div class="popup__count">3</div>
+			<p><a href="#">Upload</a> a scanned copy of your driver's license, passport or other document(s) proving your identity</p>
 		</li>
 	</ul>
 	<input class="popup__btn" type="submit" value="Save">
