@@ -354,7 +354,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 
 .profile { padding: 80px 0 160px 0; overflow: hidden; }
 
-.profile__photo { position: relative; float: left; width: 222px; height: 259px; }
+.profile__photo { position: relative; float: left; width: 222px; height: 259px; cursor: pointer; }
 .profile__photo img { display: block; margin: 9px 0 0 9px; }
 
 .profile__photo-bg { position: absolute; top: 0; left: 0; background: url('../img/icons-s9faa33d22f.png') 0 -134px no-repeat; width: 222px; height: 259px; }
@@ -362,13 +362,21 @@ table { border-spacing: 0; border-collapse: collapse; }
 .profile__detail { float: right; width: 700px; }
 
 .profile__desc { margin-bottom: 40px; font-size: 16px; color: #2c6871; line-height: 1.5; }
-.profile__desc button { position: relative; top: -2px; margin-left: 12px; background: url('../img/icons-s9faa33d22f.png') 0 -5472px no-repeat; width: 16px; height: 16px; }
-.profile__desc button:hover { background: url('../img/icons-s9faa33d22f.png') 0 -5527px no-repeat; width: 16px; height: 16px; }
+.profile__desc .text button { position: relative; top: -2px; margin-left: 12px; background: url('../img/icons-s9faa33d22f.png') 0 -5472px no-repeat; width: 16px; height: 16px; }
+.profile__desc .text button:hover { background: url('../img/icons-s9faa33d22f.png') 0 -5527px no-repeat; width: 16px; height: 16px; }
+.profile__desc .edit { position: relative; width: 680px; height: 150px; }
+.profile__desc .edit textarea { width: 680px; height: 150px; font-size: 16px; color: #2c6871; line-height: 1.5; }
+.profile__desc .edit button { position: absolute; top: 65px; right: -15px; background: url('../img/icons-s9faa33d22f.png') 0 -4975px no-repeat; width: 27px; height: 28px; }
+.profile__desc .edit button:hover { background: url('../img/icons-s9faa33d22f.png') 0 -4937px no-repeat; width: 27px; height: 28px; }
 
-.profile__name { position: relative; width: 232px; margin: -10px 0 15px -10px; }
-.profile__name input { width: 210px; height: 69px; padding: 0 10px; border-radius: 6px; border: 1px dashed #959595; font-family: "FiveMinutes", Arial, Tahoma, sans-serif; font-size: 55px; color: #2c6871; font-weight: bold; }
-.profile__name button { position: absolute; top: 23px; right: -15px; background: url('../img/icons-s9faa33d22f.png') 0 -4975px no-repeat; width: 27px; height: 28px; }
-.profile__name button:hover { background: url('../img/icons-s9faa33d22f.png') 0 -4937px no-repeat; width: 27px; height: 28px; }
+.profile__name { margin: -10px 0 15px -10px; font-family: "FiveMinutes", Arial, Tahoma, sans-serif; font-size: 55px; color: #2c6871; font-weight: bold; }
+.profile__name .text { position: relative; }
+.profile__name .text button { position: relative; top: -25px; margin-left: 12px; background: url('../img/icons-s9faa33d22f.png') 0 -5472px no-repeat; width: 16px; height: 16px; }
+.profile__name .text button:hover { background: url('../img/icons-s9faa33d22f.png') 0 -5527px no-repeat; width: 16px; height: 16px; }
+.profile__name .edit { position: relative; width: 360px; }
+.profile__name .edit input { font-family: "FiveMinutes", Arial, Tahoma, sans-serif; font-size: 55px; font-weight: bold; width: 350px; height: 60px; padding: 0 10px; border-radius: 6px; border: 1px dashed #959595; line-height: 1.2em; margin-top: -10px; margin-left: -10px; }
+.profile__name .edit button { position: absolute; top: 12px; right: -15px; background: url('../img/icons-s9faa33d22f.png') 0 -4975px no-repeat; width: 27px; height: 28px; }
+.profile__name .edit button:hover { background: url('../img/icons-s9faa33d22f.png') 0 -4937px no-repeat; width: 27px; height: 28px; }
 
 .profile__country strong { display: block; margin-bottom: 10px; font-size: 18px; color: #2c6871; }
 

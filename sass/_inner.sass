@@ -117,6 +117,7 @@
 	float: left
 	width: 222px
 	height: 259px
+	cursor: pointer
 	img
 		display: block
 		margin: 9px 0 0 9px
@@ -133,34 +134,68 @@
 	font-size: 16px
 	color: $blue-dark
 	line-height: 1.5
-	button
+	.text
+		button
+			position: relative
+			top: -2px
+			margin-left: 12px
+			+sized-sprite($icons, btn-edit-pr)
+			&:hover
+				+sized-sprite($icons, btn-edit-pr-h)
+	.edit
 		position: relative
-		top: -2px
-		margin-left: 12px
-		+sized-sprite($icons, btn-edit-pr)
-		&:hover
-			+sized-sprite($icons, btn-edit-pr-h)
+		width: 680px
+		height: 150px
+		textarea
+			width: 680px
+			height: 150px
+			font-size: 16px
+			color: $blue-dark
+			line-height: 1.5
+		button
+			position: absolute
+			top: 65px
+			right: -15px
+			+sized-sprite($icons, btn-name)
+			&:hover
+				+sized-sprite($icons, btn-name-h)
 .profile__name
-	position: relative
-	width: 232px
 	margin: -10px 0 15px -10px
-	input
-		width: 210px
-		height: 69px
-		padding: 0 10px
-		border-radius: 6px
-		border: 1px dashed #959595
-		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif	
-		font-size: 55px
-		color: $blue-dark
-		font-weight: bold 
-	button
-		position: absolute
-		top: 23px
-		right: -15px
-		+sized-sprite($icons, btn-name)
-		&:hover
-			+sized-sprite($icons, btn-name-h)
+	font-family: 'FiveMinutes', Arial, Tahoma, sans-serif	
+	font-size: 55px	
+	color: $blue-dark
+	font-weight: bold 
+	.text
+		position: relative
+		button
+			position: relative
+			top: -25px
+			margin-left: 12px
+			+sized-sprite($icons, btn-edit-pr)
+			&:hover
+				+sized-sprite($icons, btn-edit-pr-h)
+	.edit
+		position: relative
+		width: 360px
+		input
+			font-family: 'FiveMinutes', Arial, Tahoma, sans-serif	
+			font-size: 55px	
+			font-weight: bold
+			width: 350px
+			height: 60px
+			padding: 0 10px
+			border-radius: 6px
+			border: 1px dashed #959595
+			line-height: 1.2em
+			margin-top: -10px
+			margin-left: -10px
+		button
+			position: absolute
+			top: 12px
+			right: -15px
+			+sized-sprite($icons, btn-name)
+			&:hover
+				+sized-sprite($icons, btn-name-h)
 .profile__country
 	strong
 		display: block
