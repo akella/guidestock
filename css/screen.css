@@ -12,7 +12,7 @@ html, body { height: 100%; }
 
 html { background: url(../img/bg.jpg); }
 
-body { background: url(../img/bg-top.png) no-repeat 56% 0; font-family: "Cuprum", Arial, Tahoma, sans-serif; font-weight: normal; font-size: 14px; color: #231f20; line-height: 1; }
+body { background: url(../img/bg-top1.png) no-repeat 56% 0; font-family: "Cuprum", Arial, Tahoma, sans-serif; font-weight: normal; font-size: 14px; color: #231f20; line-height: 1; }
 
 a img, fieldset { border: none; }
 
@@ -352,7 +352,7 @@ table { border-spacing: 0; border-collapse: collapse; }
 .steps__list .title { margin-bottom: 25px; font-size: 52px; color: #a9a555; }
 .steps__list p { font-size: 20px; color: #2c6871; text-shadow: rgba(255, 255, 255, 0.3) 1px 1px 0; line-height: 1.4; }
 
-.profile { padding: 80px 0 160px 0; overflow: hidden; }
+.profile { padding: 80px 0 40px 0; overflow: hidden; }
 
 .profile__photo { position: relative; float: left; width: 222px; height: 259px; cursor: pointer; }
 .profile__photo img { display: block; margin: 9px 0 0 9px; }
