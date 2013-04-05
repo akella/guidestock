@@ -337,23 +337,6 @@ table
 .popup__col-1, .popup__col-2
 	position: relative
 	width: 325px
-	.popup__btn
-		right: 0
-		bottom: 18px
-		+sized-sprite($icons, btn-bg)
-		border-radius: 2px
-		font-family: 'Cuprum', Arial, Tahoma, sans-serif
-		font-size: 18px
-		letter-spacing: 0
-		&:hover
-			+sized-sprite($icons, btn-bg-h)
-		&:active
-			+sized-sprite($icons, btn-bg-a)
-.popup__col-2
-	.popup__btn
-		width: 60px
-		&:hover, &:active
-			width: 60px
 .popup__col-1
 	float: left
 .popup__col-2
@@ -586,7 +569,13 @@ table
 		display: inline-block
 		margin-bottom: 17px
 .popup__fb
-	+sized-sprite($icons, pp-fb)
+	margin-bottom: 50px
+	text-align: center
+	a
+		display: inline-block
+		width: 188px
+		height: 30px
+		+sized-sprite($icons, pp-fb)
 .popup__tw
 	+sized-sprite($icons, pp-tw)
 .popup__title
@@ -605,9 +594,9 @@ table
 	position: absolute
 	bottom: 7px
 	right: 15px
-	+sized-sprite($icons, inp-btn)
+	+sized-sprite($icons, inp-btn-s)
 	font-family: 'FiveMinutes', Arial, Tahoma, sans-serif	
-	font-size: 42px
+	font-size: 36px
 	color: #fff
 	text-shadow: rgba(0,0,0,0.26) 0 1px 0
 	text-align: center
@@ -616,7 +605,7 @@ table
 	cursor: pointer
 	z-index: 10 
 	&:hover
-		+sized-sprite($icons, inp-btn-h)
+		+sized-sprite($icons, inp-btn-s-h)
 //text-field
 .text-field
 	position: relative	
