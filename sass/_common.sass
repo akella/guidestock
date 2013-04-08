@@ -667,4 +667,65 @@ table
 	bottom: -10px
 	left: -2px
 	right: -4px
-	
+//checkpoint
+.checkpoint
+	position: absolute
+	width: 182px
+	padding: 10px 10px 25px 10px
+	background: #e2e5d9
+	border: 1px solid #bbb
+	border-radius: 6px
+	box-shadow: 0 0 0 #f0f2ec inset
+	strong
+		font-size: 14px
+		color: $blue-dark
+		font-weight: normal 
+	&:after
+		content: ""
+		position: absolute
+		bottom: -14px
+		left: 20px
+		+sized-sprite($icons, point-arr)
+.checkpoint__name
+	width: 162px
+	height: 29px
+	padding: 0 10px
+	margin: 8px 0 12px 0
+	background: url(../img/checkpoint-input.png) no-repeat
+	font-size: 18px
+	color: $blue-dark 
+.checkpoint__photo
+	margin-top: 10px
+	overflow: hidden
+.checkpoint__pic
+	float: left
+	width: 80px
+	height: 65px
+	margin-right: 12px
+	border: 1px solid #acaea5
+	border-radius: 5px
+	background: url(../img/checkpoint-pic.png) no-repeat 50% 50% #fff
+	input
+		width: 80px
+		height: 65px
+		opacity: 0
+		filter: alpha(opacity=0)
+.checkpoint__btns
+	overflow: hidden
+	button
+		font-size: 18px
+		color: #FFF
+		text-shadow: rgba(0,0,0,0.26) 1px 1px 0  
+.checkpoint__ok
+	margin-bottom: 10px
+	+sized-sprite($icons, btn-point-green)
+	&:hover
+		+sized-sprite($icons, btn-point-green-h)
+.checkpoint__cancel
+	+sized-sprite($icons, btn-point-gray)
+	&:hover
+		+sized-sprite($icons, btn-point-gray-h)
+.checkpoint__delete
+	+sized-sprite($icons, btn-point-red)
+	&:hover
+		+sized-sprite($icons, btn-point-blue)
