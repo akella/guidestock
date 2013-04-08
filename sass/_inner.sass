@@ -8,7 +8,6 @@
 	p
 		margin-bottom: 25px
 		font-size: 18px
-		color: $blue-dark 
 .instructions
 	font-size: 0
 	li
@@ -20,7 +19,6 @@
 		text-align: center	
 	p
 		font-size: 18px
-		color: $blue-dark 
 .instructions__pic
 	position: relative
 	margin-bottom: 20px
@@ -58,7 +56,6 @@
 	background: $red 
 .instructions__info
 	font-size: 22px
-	color: $blue-dark 
 	text-align: center
 	span
 		color: $red
@@ -79,7 +76,6 @@
 		display: block
 		margin-left: 200px
 		font-size: 80px
-		color: $blue-dark
 		text-align: right
 .steps__list
 	font-size: 0
@@ -89,17 +85,46 @@
 		width: 271px
 		padding: 0 24px
 		vertical-align: top
-	img
-		margin-bottom: 30px
+		&:hover
+			.steps__flipper					
+				@include transform(rotateX(180deg))
+				@include transition(all 0.6s linear)
 	.title
 		margin-bottom: 25px
 		font-size: 38px 
-		color: $blue-dark
 		span
-			color: $red
+			color: $red	
+.steps__flipper
+	position: relative
+	height: 266px
+	margin-bottom: 30px	
+	@include perspective(1000)
+	@include transition(all 0.3s linear)
+	@include transform-style(preserve-3d)	
+.steps__front, .steps__back	
+	position: absolute
+	top: 0
+	left: 0
+	@include backface-visibility(hidden)
+.steps__front_v1
+	+sized-sprite($icons, v1)
+.steps__front_v2
+	+sized-sprite($icons, v2)
+.steps__front_v3
+	+sized-sprite($icons, v3)
+.steps__front	
+	z-index: 5
+	img
+		display: block
+.steps__back
+	+sized-sprite($icons, v4)
+	@include transform(rotateX(180deg))
+	line-height: 266px
 	p
+		display: inline-block
+		padding: 0 20px
+		vertical-align: middle
 		font-size: 15px
-		color: $blue-dark
 		text-shadow: rgba(255,255,255,0.3) 1px 1px 0
 		line-height: 1.4
 //profile
@@ -125,7 +150,6 @@
 .profile__desc
 	margin-bottom: 40px 
 	font-size: 16px
-	color: $blue-dark
 	line-height: 1.5
 	button
 		position: relative
@@ -146,7 +170,6 @@
 		border: 1px dashed #959595
 		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif	
 		font-size: 55px
-		color: $blue-dark
 		font-weight: bold 
 	button
 		position: absolute
@@ -160,7 +183,6 @@
 		display: block
 		margin-bottom: 10px
 		font-size: 18px
-		color: $blue-dark
 .country-select
 	+sized-sprite($icons, select)
 //create
@@ -219,7 +241,6 @@
 		color: $red
 	span
 		font-weight: bold
-		color: $blue-dark 
 .work-place__interval
 	position: absolute
 	top: 59px
@@ -282,7 +303,6 @@
 	background: #FFF 
 	border-radius: 4px
 	font-size: 14px
-	color: $blue-dark
 	font-weight: bold 
 	z-index: 5 
 	&:after
@@ -300,7 +320,6 @@
 		position: relative
 		padding: 0 15px 0 40px
 		font-size: 18px
-		color: $blue-dark
 		text-shadow: rgba(255,255,255,.9) 1px 1px 0
 		cursor: pointer 
 		&:before, &:after
@@ -333,7 +352,6 @@
 			width: 60px
 			line-height: 15px 
 			font-size: 12px
-			color: $blue-dark
 		i
 			width: 185px
 			margin-right: 8px
@@ -349,7 +367,6 @@
 .work-overview__title
 	padding: 10px 0
 	font-size: 18px
-	color: $blue-dark
 	text-shadow: 1px 1px 0 rgba(255,255,255,.9)
 	text-align: center
 	span
@@ -468,7 +485,6 @@
 	float: left
 	margin-top: 17px
 	font-size: 18px
-	color: $blue-dark
 	span
 		color: $red 
 .cr-btn-1
@@ -560,7 +576,6 @@
 		padding: 0 10px
 		background: none
 		font-size: 18px
-		color: $blue-dark
 	.text-field__bg-1
 		left: -2px
 		right: -1px
@@ -574,7 +589,6 @@
 .create__label
 	margin-bottom: 10px
 	font-size: 18px
-	color: $blue-dark  
 .create__ptoto
 	overflow: hidden
 .create__pic
@@ -618,4 +632,3 @@
 		border-width: 0 1px 0 1px		
 		background: #f1f4e8
 		font-size: 18px
-		color: $blue-dark

@@ -29,6 +29,10 @@
 		padding: 0 18px
 .slider__pic
 	position: relative	
+	&:hover
+		span
+			top: 0
+			left: -7px
 	img
 		position: relative
 		margin: 5px 0 0 8px
@@ -36,8 +40,9 @@
 		z-index: 10
 	span
 		position: absolute
-		top: 0
-		left: -7px	
+		top: 5px
+		left: -2px
+		@include transition(all 0.1s linear)
 		z-index: 5
 .slider__approved
 	+sized-sprite($icons, approved)
