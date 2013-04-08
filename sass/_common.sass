@@ -671,7 +671,7 @@ table
 .checkpoint
 	position: absolute
 	width: 182px
-	padding: 10px 10px 25px 10px
+	padding: 15px 10px 25px 10px
 	background: #e2e5d9
 	border: 1px solid #bbb
 	border-radius: 6px
@@ -686,6 +686,13 @@ table
 		bottom: -14px
 		left: 20px
 		+sized-sprite($icons, point-arr)
+.checkpoint__close
+	position: absolute
+	top: 1px
+	right: 2px
+	+sized-sprite($icons, checkpoint-close)
+	&:hover
+		+sized-sprite($icons, checkpoint-close-h)
 .checkpoint__name
 	width: 162px
 	height: 29px

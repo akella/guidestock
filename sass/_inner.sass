@@ -171,6 +171,7 @@
 	padding: 20px 17px 0 17px
 	margin-bottom: 70px
 	background: url(../img/bg-create.jpg)
+//work-place
 .work-place
 	position: relative
 	width: 882px
@@ -270,8 +271,83 @@
 .create__instruments
 	padding: 30px 0 20px 0
 	overflow: hidden
+//work-overview
+.work-overview
+	position: relative
+.work-overview__back
+	position: absolute
+	top: -20px
+	right: 3px
+	padding: 4px 25px 3px 8px
+	background: #FFF 
+	border-radius: 4px
+	font-size: 14px
+	color: $blue-dark
+	font-weight: bold 
+	z-index: 5 
+	&:after
+		content: ""
+		position: absolute
+		top: -2px
+		right: -10px
+		+sized-sprite($icons, overview-close)
+.work-overview__process
+	position: absolute
+	top: -20px
+	left: -10px	
+	z-index: 10
+	strong
+		position: relative
+		padding: 0 15px 0 40px
+		font-size: 18px
+		color: $blue-dark
+		text-shadow: rgba(255,255,255,.9) 1px 1px 0
+		cursor: pointer 
+		&:before, &:after
+			content: ""
+			position: absolute
+		&:before
+			top: -4px
+			left: 8px
+			width: 29px
+			height: 29px
+			background: inline-image('../img/processing.gif','image/gif') repeat 0 0
+		&:after
+			top: 8px
+			right: 0
+			+sized-sprite($icons, arr)
+	ul
+		position: absolute
+		top: 23px
+		left: 2px
+		+sized-sprite($icons, process)		
+	li			
+		padding: 25px 0 0 25px
+		overflow: hidden
+		&:first-child
+			padding: 20px 0 0 25px
+		span, i, button, em
+			float: left		
+			height: 15px	
+		span
+			width: 60px
+			line-height: 15px 
+			font-size: 12px
+			color: $blue-dark
+		i
+			width: 185px
+			margin-right: 8px
+			background: $blue
+			border-radius: 8px 
+			overflow: hidden
+		em
+			background: $green-light 			 
+		button
+			+sized-sprite($icons, process-close)
+			&:hover
+				+sized-sprite($icons, process-close-h)
 .work-overview__title
-	padding: 30px 0 5px 0
+	padding: 10px 0
 	font-size: 18px
 	color: $blue-dark
 	text-shadow: 1px 1px 0 rgba(255,255,255,.9)
