@@ -209,12 +209,183 @@
 	padding: 80px 10px 100px 10px
 .create__panel
 	position: relative
-	padding: 0 17px
+	padding: 20px 17px 0 17px
 	margin-bottom: 70px
 	background: url(../img/bg-create.jpg)
+.work-place
+	position: relative
+	width: 882px
+	height: 122px
+	margin: 0 auto
+	//background: red
+.work-place__man
+	position: absolute
+	top: 59px
+	width: 38px
+	height: 57px
+	background: #a9a555
+	.ico-man, .ico-drop
+		position: absolute
+	.ico-man
+		top: 10px
+		left: 10px
+		+sized-sprite($icons, man)  
+	.ico-drop
+		top: -59px
+		left: 0
+		+sized-sprite($icons, drop)
+		z-index: 5  
+.work-place__info
+	position: absolute
+	top: -56px
+	left: 20px
+	width: 125px
+	height: 41px
+	padding: 3px 3px 3px 33px
+	border: 1px solid #b8bab2
+	background: #fff
+	border-radius: 0 10px 10px 0
+	img
+		float: right
+		margin-left: 10px 
+		border: 1px solid #949494
+		border-radius: 7px
+	strong, span
+		display: block
+		overflow: hidden
+		font-size: 14px		
+	strong
+		padding: 6px 0 2px 0
+		color: $red
+	span
+		font-weight: bold
+		color: $blue-dark 
+.work-place__interval
+	position: absolute
+	top: 59px
+	height: 57px	
+	background: #60AFB4 
+	cursor: pointer
+	&:after
+		display: none
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		box-shadow: #ce6641 0 0 0 2px inset
+		z-index: 5
+	&:hover				
+		strong, i
+			opacity: 0.43
+			filter: alpha(opacity=43)
+		&:after
+			display: block
+	strong
+		position: absolute
+		top: 20px
+		left: 40%
+		height: 20px
+		line-height: 20px
+		padding: 0 10px
+		background: #27616a
+		border-radius: 10px
+		color: #fff  
+		text-shadow: 1px 1px 0 rgba(0,0,0,.26)
+	i
+		float: left
+		height: 57px		
+.work-place__slider
+	position: absolute
+	top: -5px
+	+sized-sprite($icons, slider)
+	z-index: 10
+	cursor: pointer 
+.work-place__blue
+	background: #60AFB4 
+.work-place__red
+	background: #ce6641
+.work-place__white
+	background: #fff
 .create__instruments
-	padding: 20px 0
+	padding: 30px 0 20px 0
 	overflow: hidden
+.work-overview__title
+	padding: 30px 0 5px 0
+	font-size: 18px
+	color: $blue-dark
+	text-shadow: 1px 1px 0 rgba(255,255,255,.9)
+	text-align: center
+	span
+		margin: 0 50px
+.work-overview__place
+	position: relative
+	height: 68px
+	border: 1px dashed #b0b3a9
+	background: #e8ebe1
+	border-radius: 20px
+	button
+		position: absolute
+		top: 50%
+		margin-top: -9px
+		background: $blue-dark 
+		border-radius: 50%
+	i
+		display: block
+.work-overview__prev
+	left: 10px
+	i		
+		+sized-sprite($icons, prev1)
+.work-overview__next
+	right: 10px
+	i		
+		+sized-sprite($icons, next1)
+.work-overview__wave
+	height: 68px
+	margin: 0 35px
+	overflow: hidden
+.work-overview__man
+	position: absolute
+	top: -1px
+	height: 70px
+	width: 46px
+	background: #a9a555 
+	i
+		position: absolute
+		top: 11px
+		left: 13px
+		+sized-sprite($icons, man1)
+.work-overview__scale
+	margin-left: 94px
+.work-overview__opacity, .work-overview__red, .work-overview__yellow
+	position: absolute
+	top: 0
+	height: 68px
+.work-overview__red
+	background: rgba(200,88,56,.6) 
+.work-overview__yellow
+	background: rgba(184,182,121,.6)
+.work-overview__blue
+	position: absolute
+	top: 5px
+	left: 0
+	width: 100%
+	height: 13px
+	background: #349ba6  
+	i
+		position: absolute
+		top: -2px
+		bottom: -2px
+		width: 2px
+		background: #2c6871 
+.work-overview__left
+	left: 0
+.work-overview__right
+	right: 0
+.work-overview__middle
+	right: -1px
+	z-index: 5 
 .create__btns
 	float: left
 	margin-right: 20px

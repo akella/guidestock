@@ -34,8 +34,44 @@
 	</header>
 	<section class="create">
 		<div class="create__panel">
-			<div class="create__work-place">
-				<img src="img/panel.png" alt="">
+			<div class="work-place">
+				<div class="work-place__man" style="left: 0;">
+					<i class="ico-man"></i>
+					<i class="ico-drop"></i>
+					<div class="work-place__info">
+						<img src="img/pic4.jpg" alt="">
+						<strong>High Town</strong>
+						<span>10 min</span>					
+					</div>
+				</div>
+				<div class="work-place__interval" style="left: 38px; width: 289px">
+					<i class="work-place__blue" style="width: 200px"></i>
+					<i class="work-place__red" style="width: 89px"></i>
+					<strong>11 min</strong>
+				</div>
+				<div class="work-place__man" style="left: 326px;">
+					<i class="ico-man"></i>
+					<i class="ico-drop"></i>
+				</div>
+				<div class="work-place__interval" style="left: 364px; width: 290px">
+					<i class="work-place__blue" style="width: 200px"></i>
+					<i class="work-place__white" style="width: 90px"></i>
+					<strong>11 min</strong>
+				</div>
+				<div class="work-place__man" style="left: 654px;">
+					<i class="ico-man"></i>
+					<i class="ico-drop"></i>
+				</div>
+				<div class="work-place__interval" style="left: 692px; width: 152px">
+					<i class="work-place__blue" style="width: 100px"></i>
+					<i class="work-place__white" style="width: 52px"></i>
+					<strong>11 min</strong>
+					<div class="work-place__slider" style="left: 20px"></div>
+				</div>
+				<div class="work-place__man" style="left: 844px;">
+					<i class="ico-man"></i>
+					<i class="ico-drop"></i>
+				</div>
 			</div>
 			<div class="create__instruments">
 				<div class="create__btns">
@@ -48,6 +84,33 @@
 					<button class="create__mute"></button>
 					<div class="create__slider"><i></i></div>
 					<div class="create__time"><span>0:15</span> / 0:30</div>
+				</div>
+			</div>
+			<div class="work-overview">
+				<div class="work-overview__title">Triumphal Arch<span>-</span>Elysee Palace</div>
+				<div class="work-overview__place">
+					<button class="work-overview__prev"><i></i></button>
+					<button class="work-overview__next"><i></i></button>
+					<div class="work-overview__wave">
+						<div class="work-overview__man" style="left: 63px"><i></i></div>
+						<div class="work-overview__man" style="right: 63px"><i></i></div>
+						<img src="img/wave.png" alt="">
+						<div class="work-overview__opacity" style="left: 109px; width: 181px">
+							<div class="work-overview__blue">
+								<i class="work-overview__left"></i>
+								<i class="work-overview__middle"></i>
+							</div>
+						</div>						
+						<div class="work-overview__yellow" style="left: 290px; width: 305px">
+							<div class="work-overview__blue">
+								<i class="work-overview__right"></i>
+							</div>
+						</div>
+						<div class="work-overview__red" style="left: 595px; width: 200px"></div>
+					</div>
+				</div>
+				<div class="work-overview__scale">
+					<img src="img/scale.png" alt="">
 				</div>
 			</div>
 			<div class="create__instruments">
@@ -135,5 +198,37 @@
 	</div>	
 </footer>
 <!-- END .wrap -->
+<!-- BEGIN .checkpoint -->
+<form class="checkpoint" action="" style="top: 50px; left: 50px">
+	<strong>Enter the name of the checkpoint</strong>
+	<input class="checkpoint__name" type="text">
+	<strong>Browse a photo</strong>
+	<div class="checkpoint__photo">
+		<div class="checkpoint__pic">
+			<input type="file">
+		</div>
+		<div class="checkpoint__btns">
+			<button class="checkpoint__ok">OK</button>
+			<button class="checkpoint__cancel">Cancel</button>
+		</div>
+	</div>
+</form>
+<!-- END .checkpoint -->
+<!-- BEGIN .checkpoint -->
+<form class="checkpoint" action="" style="top: 300px; left: 50px">
+	<strong>Enter the name of the checkpoint</strong>
+	<input class="checkpoint__name" type="text">
+	<strong>Browse a photo</strong>
+	<div class="checkpoint__photo">
+		<div class="checkpoint__pic">
+			<input type="file">
+		</div>
+		<div class="checkpoint__btns">
+			<button class="checkpoint__ok">Save</button>
+			<button class="checkpoint__delete">Delete</button>
+		</div>
+	</div>
+</form>
+<!-- END .checkpoint -->
 </body>
 </html>
