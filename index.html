@@ -1,10 +1,11 @@
 <!doctype html>
-<!--[if lte IE 8]><html lang="ru-RU" class="lteie8"><![endif]-->
+<!--[if IE 8]><html lang="ru-RU" class="ie8"><![endif]-->
 <!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
-	<link rel="stylesheet" media="screen" href="css/screen.css">
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/common.js"></script>
@@ -12,155 +13,58 @@
 <body>
 <!-- BEGIN .wrap -->
 <section class="wrap">
+	<!-- BEGIN .header -->	
 	<header class="header">
-		<h1 class="logo"><a href="#">Guidestock</a></h1>
-		<nav class="nav">
-			<ul>
-				<li><a class="nav__item-1" href="#">Create Guide</a></li>
-				<li class="active"><a class="nav__item-2" href="#">My Guides</a></li>
-				<li><a class="nav__item-3" href="#">My Profile</a></li>
-			</ul>
-		</nav>
-		<div class="login">
-			<div class="login__pic">
-				<a href="#"><img src="img/user.jpg" alt=""></a>
+		<div class="container">
+			<a class="logo" href="#">Guidestock</a>
+			<a class="btn btn_red" href="#">create guide</a>
+			<a class="btn btn_ylw" href="#">log out</a>
+			<a class="header__user" href="#">Anfisa Hleb</a>
+			<div class="header__links">
+				<a href="#">home<i class="ico-home"></i></a>
+				<a href="#">help<i class="ico-help"></i></a>
 			</div>
-			<div class="login__info">
-				<span>Welcome</span>
-				<a href="#">Stanislav Schangin</a>
-				<button>LOG OUT</button>
-			</div>			
 		</div>
 	</header>
-	<section class="slider">
-		<button class="slider__prev"></button>
-		<button class="slider__next"></button>
-		<div class="slider__list">
-			<ul>
-				<li>
-					<div class="slider__pic">
-						<a href="#">
-							<span class="slider__approved"></span>
-							<img src="img/pic1.jpg" alt="">
-							<div class="slider__pic-out"></div>
-						</a>
-					</div>
-					<div class="slider__info">
-						<a href="#">Paris</a>
-						<div class="slider__btns">
-							<button class="btn btn_submit">submit</button>
-							<button class="btn btn_edit">edit</button>
-							<button class="btn btn_delete">delete</button>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="slider__pic">
-						<a href="#">
-							<span class="slider__saved"></span>
-							<img src="img/pic1.jpg" alt="">
-							<div class="slider__pic-out"></div>
-						</a>
-					</div>
-					<div class="slider__info">
-						<a href="#">Paris</a>
-						<div class="slider__btns">
-							<button class="btn btn_submit">submit</button>
-							<button class="btn btn_edit">edit</button>
-							<button class="btn btn_delete">delete</button>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="slider__pic">
-						<a href="#">
-							<span class="slider__rejected"></span>
-							<img src="img/pic1.jpg" alt="">
-							<div class="slider__pic-out"></div>
-						</a>
-					</div>
-					<div class="slider__info">
-						<a href="#">Paris</a>
-						<div class="slider__btns">
-							<button class="btn btn_submit">submit</button>
-							<button class="btn btn_edit">edit</button>
-							<button class="btn btn_delete">delete</button>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="slider__pic">
-						<a href="#">
-							<span class="slider__pending"></span>
-							<img src="img/pic1.jpg" alt="">
-							<div class="slider__pic-out"></div>
-						</a>
-					</div>
-					<div class="slider__info">
-						<a href="#">Paris</a>
-						<div class="slider__btns">
-							<button class="btn btn_submit">submit</button>
-							<button class="btn btn_edit">edit</button>
-							<button class="btn btn_delete">delete</button>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="slider__pic">
-						<a href="#">
-							<span class="slider__saved"></span>
-							<img src="img/pic1.jpg" alt="">
-							<div class="slider__pic-out"></div>
-						</a>
-					</div>
-					<div class="slider__info">
-						<a href="#">Paris</a>
-						<div class="slider__btns">
-							<button class="btn btn_submit">submit</button>
-							<button class="btn btn_edit">edit</button>
-							<button class="btn btn_delete">delete</button>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="slider__pic">
-						<a href="#">
-							<span class="slider__rejected"></span>
-							<img src="img/pic1.jpg" alt="">
-							<div class="slider__pic-out"></div>
-						</a>
-					</div>
-					<div class="slider__info">
-						<a href="#">Paris</a>
-						<div class="slider__btns">
-							<button class="btn btn_submit">submit</button>
-							<button class="btn btn_edit">edit</button>
-							<button class="btn btn_delete">delete</button>
-						</div>
-					</div>
-				</li>
-			</ul>
+	<!-- END .header -->
+	<!-- BEGIN .title -->
+	<div class="container">
+		<div class="title">Paris for dreammers<a class="btn btn_green" href="#">save</a></div>
+	</div>		
+	<!-- END .title -->
+	<!-- BEGIN .map -->
+	<div class="map">
+		<iframe width="100%" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ru/?ie=UTF8&amp;t=m&amp;ll=50.44712,30.621471&amp;spn=0.020769,0.036478&amp;z=14&amp;output=embed"></iframe>
+		<form class="map__search" action="/">
+			<input type="text" placeholder="Enter the name or adress of the location">
+			<button type="submit"><i></i></button>
+		</form>
+		<div class="map__help">Drag this marker to the next check point<i class="ico-mark"></i>
 		</div>
-	</section>
-	<section class="bottom">
-		<button class="btn-earning">Request Earnings</button>
-		<div class="btn-big btn-big_another">
-			<a href="#"><span>Create another guide</span></a>
+		<div class="container">
+			<div class="map-slider">
+				<button class="prev"><i></i></button>
+				<button class="next"><i></i></button>
+				<div class="map-slider__items">
+					<ul>
+						<li class="active">
+							<div class="map-slider__number">1</div>
+							<span>Parliament square</span>
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	</section>
+	</div>
+	<!-- END .map -->
+	<div class="push"></div>
 </section>
 <footer class="footer">
-	<div class="container">
-		<div class="footer__nav">
-			<ul>
-				<li><a href="#">Contact Us</a></li>                  
-				<li><a href="#">Terms of Use</a></li>
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Tutorial</a></li>
-			</ul>
-		</div>
-		<div class="copyright">Copyright © 2013 Guidestock. All Rights Reserved.</div>
-	</div>	
+	as
 </footer>
 <!-- END .wrap -->
 </body>

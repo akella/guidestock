@@ -1,78 +1,110 @@
 @import "base"
 //main styles
-//slider
-.slider
+//map
+.map
 	position: relative
-	padding-top: 35px
-	margin-bottom: 20px
-.slider__prev, .slider__next
+	min-height: 380px 
+	iframe
+		display: block
+.map__search	
 	position: absolute
-	top: 50%
-	margin-top: -51px
-.slider__prev
-	left: -75px
-	+sized-sprite($icons, prev)
-.slider__next
-	right: -75px
-	+sized-sprite($icons, next)
-.slider__list
+	top: 0
+	left: 50%
+	margin-left: -500px
+	border: 20px solid rgba(0,0,0,.5)
+	input, button
+		float: left
+		height: 32px
+	input
+		width: 260px		
+		padding: 0 10px
+	button
+		width: 40px
+		background: #FFF 
+		text-align: center
+		i
+			display: inline-block
+			+s($icons, search)
+.map__help
+	position: absolute
+	top: 0
+	right: 50%
+	width: 130px
+	margin-right: -500px
+	background: $ylw
+	padding: 20px 75px 20px 20px
+	border: 1px solid #dad794
+	font-weight: 700 
+	font-size: 11px	
+	text-transform: uppercase 
+	.ico-mark
+		position: absolute
+		top: 12px
+		right: 23px
+.map-slider
+	position: relative
+	.prev, .next
+		position: absolute
+		top: 20px
+		padding: 15px 17px
+		background: #d9ebe2
+		i
+			display: block
+			width: 0px
+			height: 0px
+			border-style: solid	
+	.prev
+		left: 20px
+		i
+			border-width: 12.5px 20px 12.5px 0
+			border-color: transparent #b9b9b9 transparent transparent
+	.next
+		right: 20px
+		i
+			border-width: 12.5px 0 12.5px 20px
+			border-color: transparent transparent transparent #b9b9b9
+.map-slider__items
+	position: relative
+	top: -5px
+	width: 776px
+	height: 102px
+	margin: 0 auto
+	overflow: hidden
 	ul
-		overflow: hidden
-		font-size: 0
+		position: absolute
+		width: 2000em
 	li
 		position: relative
-		display: inline-block
-		vertical-align: top
-		width: 283px
-		width: 277px
-		margin-bottom: 55px
-		padding: 0 18px
-.slider__pic
-	position: relative	
-	&:hover
+		float: left
+		width: 154px
+		height: 100px
+		line-height: 100px
+		margin-right: -1px
+		border: 1px solid #babbba
+		background: #FFF 
+		font-size: 0
+		text-align: center
 		span
-			top: 0
-			left: -7px
-	img
-		position: relative
-		margin: 5px 0 0 8px
-		+border-radius(50%)
-		z-index: 10
-	span
-		position: absolute
-		top: 5px
-		left: -2px
-		@include transition(all 0.1s linear)
-		z-index: 5
-.slider__approved
-	+sized-sprite($icons, approved)
-.slider__saved
-	+sized-sprite($icons, saved)
-.slider__rejected
-	+sized-sprite($icons, rejected)
-.slider__pending
-	+sized-sprite($icons, pending)
-.slider__pic-out
+			display: inline-block
+			padding: 0 10px
+			vertical-align: middle
+			line-height: 1.4
+			font-size: 12px
+		&.active
+			width: 146px
+			height: 92px
+			line-height: 92px
+			box-shadow: #ccccce 0 0 0 3px inset
+			border: 5px solid #3c3c3c
+			z-index: 5
+.map-slider__number
 	position: absolute
 	top: 0
 	left: 0
-	+sized-sprite($icons, slide-out)	
-	z-index: 15
-.slider__info
-	margin: -45px 40px 0 40px
-	padding: 63px 13px 23px 13px
-	background: rgba(255,255,255,0.3)
-	+border-radius(10px) 
-	a
-		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif
-		font-size: 32px 
-		font-weight: bold 
-		text-shadow: rgba(255,255,255,0.9) 0 1px 0
-.slider__btns
-	margin: 9px -10px 0 0
-	overflow: hidden	
-	button
-		float: left
-		margin-left: 6px 
-		&:first-child
-			margin-left: 0 	
+	width: 32px
+	height: 32px
+	background: $red 
+	line-height: 32px
+	font-weight: bold
+	font-size: 14px
+	color: #FFF 

@@ -42,3 +42,41 @@ $break-large: 1180px;
     transition:         $what $length $easing;
 }
 
+// image replacement
+%hide-text{
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+%clr{
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  *zoom: 1;
+}
+// placeholder color
+@mixin input-placeholder($color) {
+  &.placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+// sized sprites
+@mixin image-size($path){
+  width: image-width($path);
+  height: image-height($path);
+}
+@mixin sized-sprite($map, $sprite){
+  background: sprite($map, $sprite) no-repeat;
+  @include image-size(sprite-file($map, $sprite));
+}

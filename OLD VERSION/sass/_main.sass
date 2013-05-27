@@ -1,0 +1,78 @@
+@import "base"
+//main styles
+//slider
+.slider
+	position: relative
+	padding-top: 35px
+	margin-bottom: 20px
+.slider__prev, .slider__next
+	position: absolute
+	top: 50%
+	margin-top: -51px
+.slider__prev
+	left: -75px
+	+sized-sprite($icons, prev)
+.slider__next
+	right: -75px
+	+sized-sprite($icons, next)
+.slider__list
+	ul
+		overflow: hidden
+		font-size: 0
+	li
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 283px
+		width: 277px
+		margin-bottom: 55px
+		padding: 0 18px
+.slider__pic
+	position: relative	
+	&:hover
+		span
+			top: 0
+			left: -7px
+	img
+		position: relative
+		margin: 5px 0 0 8px
+		+border-radius(50%)
+		z-index: 10
+	span
+		position: absolute
+		top: 5px
+		left: -2px
+		@include transition(all 0.1s linear)
+		z-index: 5
+.slider__approved
+	+sized-sprite($icons, approved)
+.slider__saved
+	+sized-sprite($icons, saved)
+.slider__rejected
+	+sized-sprite($icons, rejected)
+.slider__pending
+	+sized-sprite($icons, pending)
+.slider__pic-out
+	position: absolute
+	top: 0
+	left: 0
+	+sized-sprite($icons, slide-out)	
+	z-index: 15
+.slider__info
+	margin: -45px 40px 0 40px
+	padding: 63px 13px 23px 13px
+	background: rgba(255,255,255,0.3)
+	+border-radius(10px) 
+	a
+		font-family: 'FiveMinutes', Arial, Tahoma, sans-serif
+		font-size: 32px 
+		font-weight: bold 
+		text-shadow: rgba(255,255,255,0.9) 0 1px 0
+.slider__btns
+	margin: 9px -10px 0 0
+	overflow: hidden	
+	button
+		float: left
+		margin-left: 6px 
+		&:first-child
+			margin-left: 0 	
