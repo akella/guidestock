@@ -1,92 +1,47 @@
+$.fn.scrollableAddClones = function(addItems) {
+  // grab scrollable plugin
+  var scrollable;
+  if (!(scrollable = $(this).data('scrollable')) || !scrollable.getConf().circular)
+  return;
+  var nodes = scrollable.getItems();
+  var length = nodes.length;
+  var clonedClass = scrollable.getConf().clonedClass;
+  var wrap = scrollable.getItemWrap();
+  if (!addItems) addItems = Math.ceil(1000 / nodes.eq(1).width());
+  var newNodesAppend = $('<span />');
+  for (var i = 1; i <= (addItems < 5 ? addItems : 5); i++)
+  nodes.eq(i % length).clone().addClass(clonedClass).appendTo(newNodesAppend);
+  newNodesAppend.children().appendTo(wrap);
+}
+
 $(document).ready(function() {
 
-//datepicker
-if ($('.datepicker-container').length > 0) {  
-  $('.datepicker table tr:last').hide();  
-  $('.form__period').click(function() {
-    if (!$(this).hasClass('active')) {
-      $(this).addClass('active');
-      $(this).next().fadeIn();
-      $(this).next().next().show();
-      var current = new Date();
-      if (current.getMonth() == 0){
-        current.setMonth(11);
-        current.setFullYear(current.getFullYear()-1);
-      } else {
-        current.setMonth(current.getMonth()-1);
-      }
-      $(this).next().children('.datepicker-container').DatePicker({
-        flat: true,
-        format: 'd B Y',
-        date: [],
-        current: current,
-        calendars: 3,
-        mode: 'range',
-        starts: 1,
-        onChange: function(formated) {
-          $(this).parent().next().children('.datepicker-detail__date').html('<strong>' + formated.join('</strong> – <strong>') + '</strong>');
-        }
-      });
-    }
-    else {
-
-    }
-  });   
-  $('.datepicker-detail__btn button').click(function() {
-    var date_value = $(this).parent().prev().html();
-    $(this).parent().parent().parent().prev().html(date_value);
-    $(this).parent().parent().parent().fadeOut();
-    $(this).parent().parent().parent().prev().removeClass('active');
-    $(this).parent().parent().parent().next().fadeOut(); 
-    $(this).parent().parent().parent().prev().addClass('selected');
-    return false;
-  });
-  $('.datepicker-detail__btn a').click(function() {
-    if (!$(this).parent().parent().parent().prev().hasClass('selected')) {
-      $(this).parent().parent().parent().fadeOut();
-      $(this).parent().parent().parent().prev().removeClass('active');
-      $(this).parent().parent().parent().next().fadeOut();
-      var date_begin = $(this).parent().parent().parent().prev().html();
-      $(this).parent().prev().html(date_begin);    
-      $('.datepicker-container').DatePickerClear();
-    }
-    else {
-      $(this).parent().parent().parent().fadeOut();
-      $(this).parent().parent().parent().prev().removeClass('active');
-      $(this).parent().parent().parent().next().fadeOut();      
-    }
-    return false;
-  });
-  $('.form__datepicker-close').click(function() {
-    var date_begin1 = $(this).prev().prev().html();
-    $(this).prev().children('.datepicker-detail').children('.datepicker-detail__date').html(date_begin1);
-    $('.form__datepicker').fadeOut();
-    $('.form__period').removeClass('active');
-    $('.datepicker-container').DatePickerClear();
-    $(this).hide();
-  });
+//slider
+if ($('.js-ui-slider').length > 0) {
+  $('.js-ui-slider').slider({range: 'min'});
 };
 
-//messages
-$('.js-message button').click(function() {
-  $(this).parent().slideUp(100);
-  return false;
-});
-$('.js-sites').click(function() {
-  if ($(this).hasClass('open')) {
-    $(this).removeClass('open');
-    $(this).parent().next().slideUp();
-  }
-  else {
-    $(this).addClass('open');
-    $(this).parent().next().slideDown();
-  };  
-});
-
-//sortable + draglable
-if ($('.js-form-sort').length > 0) {
-  $('.js-form-sort').sortable({axis: 'y', cursor: 'move'});
-  $('.js-form-sort').disableSelection();
+//scrollable
+if ($('.js-slider').length>0) {
+  $('.js-slider').scrollable({
+    items: '.js-items',
+    prev: '.js-prev',
+    next: '.js-next'
+  });
+  var scrollable_list_1 = $('.js-slider').data('scrollable');
+  var number_list = 5;
+  scrollable_list_1.onSeek(function(event, index) {
+    if (this.getIndex() >= this.getSize() - number_list) {     
+      $('.js-next').addClass('disabled');
+    }
+  });
+  scrollable_list_1.onBeforeSeek(function(event, index) {
+    if (this.getIndex() >= this.getSize() - number_list) { 
+      if (index > this.getIndex()) {
+        return false;
+      }
+    }
+  });
 };
 
 });
