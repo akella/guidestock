@@ -1,0 +1,207 @@
+<!doctype html>
+<!--[if IE 8]><html lang="ru-RU" class="ie8"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="ru-RU"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.tools.min.js"></script>	
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>	
+	<script src="js/common.js"></script>
+</head>
+<body>
+<!-- BEGIN .wrap -->
+<section class="wrap wrap_create">
+	<!-- BEGIN .header -->	
+	<header class="header">
+		<div class="container">
+			<a class="logo" href="#">Guidestock</a>
+			<a class="btn-red" href="#">create guide</a>
+			<a class="btn-ylw" href="#">log out</a>
+			<a class="header__user" href="#">Anfisa Hleb</a>
+			<div class="header__links">
+				<a href="#">home<i class="ico-home"></i></a>
+				<a href="#">help<i class="ico-help"></i></a>
+			</div>
+		</div>
+	</header>
+	<!-- END .header -->
+	<!-- BEGIN .map -->
+	<div class="map">
+		<div class="map__title">
+			<div class="container">Paris for dreammers<a class="btn-green" href="#">save</a></div>
+		</div>
+		<div class="map__container">
+			<iframe width="100%" height="380" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.ru/?ie=UTF8&amp;t=m&amp;ll=50.44712,30.621471&amp;spn=0.020769,0.036478&amp;z=14&amp;output=embed"></iframe>
+			<form class="map__search" action="/">
+				<input type="text" placeholder="Enter the name or adress of the location">
+				<button type="submit"><i></i></button>
+			</form>
+			<div class="map__help">Drag this marker to the next check point<i class="ico-mark"></i>
+			</div>
+		</div>		
+		<div class="container">
+			<div class="map-slider">
+				<button class="prev js-prev"><i></i></button>
+				<button class="next js-next"><i></i></button>
+				<div class="map-slider__items js-slider">
+					<ul class="js-items">
+						<li class="active">
+							<div class="number">1</div>
+							<span>Parliament square</span>
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END .map -->
+	<!-- BEGIN .add -->
+	<form class="add" action="/">
+		<button class="btn-red">delete</button>
+		<button class="btn-green">save and close</button>
+		<button class="btn-red btn-red_bottom">delete</button>
+		<button class="btn-green btn-red_bottom">save and close</button>
+		<div class="add__title">
+			<div class="number">1</div>
+			<input class="input-text" type="text" value="Parliament square">
+		</div>
+		<!-- BEGIN .location -->
+		<div class="location">
+			<div class="title">Location</div>		
+		</div>		
+		<!-- END .location -->
+		<!-- BEGIN .audio -->
+		<div class="audio">
+			<div class="title">Audio</div>
+			<div class="audio__add">
+				<button class="audio__upload">Upload audio<i class="ico-upload"></i></button>
+				<button class="audio__record">Record audio<i class="ico-record"></i></button>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, hic in unde assumenda veniam aspernatur vitae harum nulla totam maiores.</p>
+			</div>
+			<div class="audio__detail">
+				<div class="audio__track">
+					<button class="audio__play"><i></i></button>
+					<div class="audio__slider">
+						<div class="js-ui-slider"></div>
+					</div>
+					<div class="audio__time">00:00/00:50</div>
+				</div>
+				<div class="audio__btns">
+					<button class="btn"><i class="ico-edit"></i></button>
+					<button class="btn"><i class="ico-del"></i></button>
+				</div>				
+			</div>
+			<div class="audio__title">westminster_bridge</div>
+			<div class="audio__detail">
+				<div class="audio__track">
+					<button class="audio__play"><i></i></button>
+					<div class="audio__slider">
+						<div class="js-ui-slider"></div>
+					</div>
+					<div class="audio__time">00:00/00:50</div>
+				</div>
+				<div class="audio__btns">
+					<button class="btn"><i class="ico-edit"></i></button>
+					<button class="btn"><i class="ico-del"></i></button>
+				</div>				
+			</div>
+			<div class="audio__title">westminster_bridge</div>
+		</div>
+		<!-- END .audio -->
+		<!-- BEGIN .description -->
+		<div class="description">
+			<div class="title">Description</div>
+			<div class="description__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eos sapiente sit neque delectus nesciunt fugit ea recusandae nemo consequatur! Aliquid, nostrum eius molestiae quaerat. Nam, nobis provident labore facere. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, odit velit consequuntur dolores optio ea libero. Autem, ad, fuga esse ea necessitatibus ipsa hic nihil culpa dignissimos corporis inventore consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, a, quia, dolorum reprehenderit assumenda blanditiis cumque modi et fugit provident quidem omnis alias corporis quasi possimus voluptatibus officia cupiditate illum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, recusandae, ab, nam excepturi sapiente impedit nostrum itaque vitae aperiam eligendi est autem omnis saepe. Neque, incidunt ab architecto accusamus maxime.</div>
+		</div>
+		<!-- END .description -->
+		<!-- BEGIN .photo -->
+		<div class="photo">
+			<div class="title">photo</div>
+			<div class="photo__list">
+				<ul>
+					<li class="photo-select">
+						<i class="ico-photo"></i>
+						<span>Select photo</span>
+						<input type="file">
+					</li>
+					<li>
+						<div class="photo__pic">
+							<button class="btn"><i class="ico-del"></i></button>
+							<button class="zoom"></button>
+							<img src="img/pic1.jpg" alt="">
+						</div>
+						<div class="photo__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, mollitia, incidunt repellendus doloremque nisi doloremque.</div>
+					</li>
+					<li>
+						<div class="photo__pic">
+							<button class="btn"><i class="ico-del"></i></button>
+							<button class="zoom"></button>
+							<img src="img/pic1.jpg" alt="">
+						</div>
+						<div class="photo__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+					</li>
+					<li>
+						<div class="photo__pic">
+							<button class="btn"><i class="ico-del"></i></button>
+							<button class="zoom"></button>
+							<img src="img/pic1.jpg" alt="">
+						</div>
+						<div class="photo__desc">Click to add description</div>
+					</li>
+					<li>
+						<div class="photo__pic">
+							<button class="btn"><i class="ico-del"></i></button>
+							<button class="zoom"></button>
+							<img src="img/pic1.jpg" alt="">
+						</div>
+						<div class="photo__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+					</li>
+					<li>
+						<div class="photo__pic">
+							<button class="btn"><i class="ico-del"></i></button>
+							<button class="zoom"></button>
+							<img src="img/pic1.jpg" alt="">
+						</div>
+						<div class="photo__desc">Click to add description</div>
+					</li>
+					<li>
+						<div class="photo__pic">
+							<button class="btn"><i class="ico-del"></i></button>
+							<button class="zoom"></button>
+							<img src="img/pic1.jpg" alt="">
+						</div>
+						<div class="photo__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- END .photo -->
+	</form>
+	<!-- END .add -->
+	<div class="push"></div>
+</section>
+<footer class="footer">
+	<div class="container">
+		<nav class="footer__nav">
+			<a href="#"><span>contacts us<i class="ico-mail"></i></span></a>
+			<a href="#"><span>terms of use<i class="ico-terms"></i></span></a>
+			<a href="#"><span>privacy policy<i class="ico-policy"></span></i></a>
+			<a href="#"><span>about<i class="ico-about"></i></span></a>
+		</nav>
+	</div>
+</footer>
+<!-- END .wrap -->
+</body>
+</html>

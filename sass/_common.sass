@@ -6,7 +6,6 @@
 html, body 
 	height: 100%
 body
-	background: url(../img/bg.jpg) 
 	font-family: 'Open Sans', Arial, Tahoma, sans-serif
 	font-weight: 400
 	font-size: 13px
@@ -68,7 +67,9 @@ table
 	min-height: 100%
 	height: auto !important
 	height: 100%
-	margin: 0 auto -80px
+	margin: 0 auto -100px
+.wrap_create
+	background: url(../img/bg.jpg) 
 .container
 	width: 1000px
 	margin: 0 auto
@@ -118,7 +119,7 @@ table
 		left: 0
 .logo
 	float: left
-	margin: 13px 42px 0 85px
+	margin: 13px 42px 0 38px
 	@extend %ht
 	+s($icons, logo)
 //footer
@@ -215,21 +216,37 @@ button
 		line-height: 1
 .btn-red
 	background: $red
-	border-color: $red
+	border-color: #f6835d
 	color: #FFF 
 	&:hover
+		border-color: $red 
 		background: #FFF
 		color: $red  
 .btn-ylw
 	background: $ylw
-	border-color: $ylw
+	border-color: #fbfad1
 	&:hover
 		background: #FFF
 		color: #3b3b3b
 		border-color: #3b3b3b
 .btn-green
 	background: $green 
-	border-color: $green 
+	border-color: #bde5d7
 	&:hover
+		border-color: $green
 		background: #FFF
 		color: $green
+//links
+.link-create
+	background: url(../img/create-text.png) 22% 50% no-repeat
+	text-align: center
+	font-size: 0
+	.btn-red
+		display: inline-block
+		width: 160px
+		height: 60px
+		line-height: 64px
+		background: url(../img/create-btn-bg.jpg)
+		font-size: 30px
+		&:hover
+			background: url(../img/create-btn-bg-h.jpg)
