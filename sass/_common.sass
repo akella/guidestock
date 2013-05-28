@@ -18,8 +18,9 @@ body
 a img, fieldset 
 	border: none
 a
-	color: #37559a
 	text-decoration: none
+	&:hover
+		color: $red 
 p
 	line-height: 1.2
 li 
@@ -105,6 +106,12 @@ table
 		&:first-child
 			padding-left: 14px
 			margin-right: 24px
+		&:hover
+			color: $red
+			.ico-home
+				+s($icons, ico-home-h)
+			.ico-help
+				+s($icons, ico-help-h)
 	i
 		position: absolute
 		top: 3px
@@ -133,6 +140,17 @@ table
 		text-transform: uppercase
 		line-height: 1
 		color: #3c3c3c 
+		&:hover
+			border-color: $red
+			color: $red 
+			.ico-mail
+				+s($icons, ico-mail-h)
+			.ico-terms
+				+s($icons, ico-terms-h)
+			.ico-policy
+				+s($icons, ico-policy-h)
+			.ico-about
+				+s($icons, ico-about-h)
 	span
 		position: relative
 		display: inline-block
@@ -178,20 +196,40 @@ table
 	background: #737373
 	i
 		display: block
+	&:hover
+		background: #3a3a3a 
 .btn-red, .btn-ylw, .btn-green
 	width: 100px
-	height: 33px
-	box-shadow: 0 0 0 4px rgba(255,255,255,.1) inset
-	line-height: 33px
+	height: 25px
+	border-style: solid
+	border-width: 4px
+	line-height: 28px
 	text-align: center
 	+font
 	text-transform: uppercase
 	font-size: 14px
 	color: #3c3c3c 
+button
+	&.btn-red, &.btn-ylw, &.btn-green
+		height: 33px
+		line-height: 1
 .btn-red
 	background: $red
+	border-color: $red
 	color: #FFF 
+	&:hover
+		background: #FFF
+		color: $red  
 .btn-ylw
 	background: $ylw
+	border-color: $ylw
+	&:hover
+		background: #FFF
+		color: #3b3b3b
+		border-color: #3b3b3b
 .btn-green
 	background: $green 
+	border-color: $green 
+	&:hover
+		background: #FFF
+		color: $green
